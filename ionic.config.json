@@ -1,0 +1,7 @@
+{
+  "name": "eteam_mkr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
