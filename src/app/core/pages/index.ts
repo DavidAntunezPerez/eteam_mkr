@@ -1,0 +1,6 @@
+export * from './players/players.page'
+export * from './teams/teams.page'
+export * from './news/news.page'
+export * from './fplayers/fplayers.page'
+export * from './fteams/fteams.page'
+export * from './home/home.page'
