@@ -3,14 +3,35 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
-  },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+      path: 'home',
+      loadChildren: () => import('./core/pages/home/home.module').then( m => m.HomePageModule)
+    },
+    {
+      path: '',
+      redirectTo: 'home',
+      pathMatch: 'full'
+    },
+    {
+      path: 'players',
+      loadChildren: () => import('./core/pages/players/players.module').then( m => m.PlayersPageModule)
+    },
+    {
+      path: 'teams',
+      loadChildren: () => import('./core/pages/teams/teams.module').then( m => m.TeamsPageModule)
+    },
+    {
+      path: 'news',
+      loadChildren: () => import('./core/pages/news/news.module').then( m => m.NewsPageModule)
+    },
+    {
+      path: 'fteams',
+      loadChildren: () => import('./core/pages/fteams/fteams.module').then( m => m.FteamsPageModule)
+    },
+    {
+      path: 'fplayers',
+      loadChildren: () => import('./core/pages/fplayers/fplayers.module').then( m => m.FplayersPageModule)
+    },
+
 ];
 
 @NgModule({
