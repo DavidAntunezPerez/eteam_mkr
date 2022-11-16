@@ -24,11 +24,11 @@ const routes: Routes = [
       loadChildren: () => import('./core/pages/news/news.module').then( m => m.NewsPageModule)
     },
     {
-      path: 'fteams',
+      path: 'favteams',
       loadChildren: () => import('./core/pages/fteams/fteams.module').then( m => m.FteamsPageModule)
     },
     {
-      path: 'fplayers',
+      path: 'favplayers',
       loadChildren: () => import('./core/pages/fplayers/fplayers.module').then( m => m.FplayersPageModule)
     },
 

@@ -1,0 +1,9 @@
+// dark color toolbar
+ion-toolbar {
+  --background: rgb(46, 46, 46);
+  --background-checked: #7a49a5;
+
+  --handle-background: #7a49a5;
+  --handle-background-checked: #000;
+  color: white;
+}
