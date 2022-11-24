@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
-
+  <!-- PLAYER LIST CONTENT -->
+  <app-playerlist *ngFor="let ply of getPlayer()" [ply]="ply" (onDelete)="onDeletePlayer($event)"
+    (onEdit)="onEditPlayer($event)"></app-playerlist>
 </ion-content>
+
+<!-- BUTTON RIGHT BOTTOM TO ADD -->
+<ion-button (click)="onNewPlayer()" slot="start" icon-only color="tertiary">
+  <ion-icon style="zoom:2" name="add-outline"></ion-icon>
+</ion-button>
