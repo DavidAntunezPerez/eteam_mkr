@@ -17,7 +17,7 @@
     <!-- LANG SELECT -->
     <ion-buttons slot="end">
       <ion-item>
-        <ion-select interface="popover" [placeholder]='"Select your language"'>
+        <ion-select interface="popover" [placeholder]='"Language..."'>
           <ion-select-option value='en'>English</ion-select-option>
           <ion-select-option value='es'>Español</ion-select-option>
           <ion-select-option value='fr'>Français</ion-select-option>
@@ -39,11 +39,11 @@
   <div class="section text-center">
     <!-- DOUBLE CHOICE BUTTONS -->
     <a routerDirection="root" [routerLink]="['/teams']" lines="none" detail="false" routerLinkActive="selected"  class="btn mb-3">
-      Create teams<i class="uil uil-eye"></i>
+      Create teams<i class="uil uil uil-shield-plus"></i>
     </a>
     <h4 class="mb-3">OR</h4>
     <a routerDirection="root" [routerLink]="['/players']" lines="none" detail="false" routerLinkActive="selected" class="btn">
-      Create players<i class="input-icon uil uil-user"></i>
+      Create players<i class="input-icon uil uil-user-plus"></i>
     </a>
   </div>
   <!-- FOOTER SECTION -->
