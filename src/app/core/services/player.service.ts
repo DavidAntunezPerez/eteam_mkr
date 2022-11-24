@@ -5,41 +5,63 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
 export class PlayerService {
-  private player : Player[] = [  
+  private player: Player[] = [
     {
       id: 0,
-      name:  'Oleksandr',
+      name: 'Oleksandr',
       surname: 'Kostyliev',
       nick: 's1mple',
       age: 25,
       kda: 1.25,
       role: 'Rifler',
-      picture: 'https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3',
+      picture:
+        'https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3',
     },
     {
       id: 1,
-      name:  'Kenny',
+      name: 'Kenny',
       surname: 'Schrub',
       nick: 'KennyS',
       age: 27,
       kda: 0.98,
       role: 'Awper',
-      picture: 'https://img-cdn.hltv.org/playerbodyshot/Ff2gUR7tQRW-6_nkTfxZdu.png?ixlib=java-2.1.0&w=400&s=f090fb981261e3c5516606d3b0139b41',
+      picture:
+        'https://img-cdn.hltv.org/playerbodyshot/Ff2gUR7tQRW-6_nkTfxZdu.png?ixlib=java-2.1.0&w=400&s=f090fb981261e3c5516606d3b0139b41',
+    },
+    {
+      id: 2,
+      name: 'Patrik',
+      surname: 'Lindberg',
+      nick: 'f0rest',
+      age: 34,
+      kda: 0.77,
+      role: 'IGL & Support',
     },
     {
       id: 3,
-      name:  'Oscar',
+      name: 'Oscar',
       surname: 'Cañellas',
       nick: 'm1xwell',
       age: 26,
       kda: 1.5,
       role: 'Awper & IGL',
-      picture: 'https://img-cdn.hltv.org/playerbodyshot/TFAU5GadOux7ZMV8XCTQwY.png?ixlib=java-2.1.0&w=400&s=8ff7347bb305f218b9cfed4999e2b6f0',
+      picture:
+        'https://img-cdn.hltv.org/playerbodyshot/TFAU5GadOux7ZMV8XCTQwY.png?ixlib=java-2.1.0&w=400&s=8ff7347bb305f218b9cfed4999e2b6f0',
+    },
+    {
+      id: 4,
+      name: 'Tarik',
+      surname: 'Celik',
+      nick: 'tarik',
+      age: 25,
+      kda: 1.13,
+      role: 'Flasher',
     },
   ];
-  private playerSubject:BehaviorSubject<Player[]> = new BehaviorSubject(this.player);
+  private playerSubject: BehaviorSubject<Player[]> = new BehaviorSubject(
+    this.player
+  );
   public playerOsb = this.playerSubject.asObservable();
 
   id: number = this.player.length + 1;
@@ -61,7 +83,6 @@ export class PlayerService {
     this.playerSubject.next(this.player);
   }
 
-  
   addPlayer(ply: Player) {
     // adds a new player
     ply.id = this.id++;
@@ -69,9 +90,9 @@ export class PlayerService {
     this.playerSubject.next(this.player);
   }
 
-  updatePlayer(ply:Player) {
+  updatePlayer(ply: Player) {
     // update player information
-    var playr = this.player.find(p=>p.id==ply.id);
+    var playr = this.player.find((p) => p.id == ply.id);
     if (playr) {
       playr.name = ply.name;
       playr.surname = ply.surname;
