@@ -67,6 +67,8 @@ export class PlayerService {
   id: number = this.player.length + 1;
   constructor() {}
 
+  // METHODS
+
   public getPlayer(): Player[] {
     // return player
     return this.player;
