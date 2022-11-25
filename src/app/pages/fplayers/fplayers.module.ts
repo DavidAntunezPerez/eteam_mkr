@@ -8,11 +8,11 @@ import { FplayersPageRoutingModule } from './fplayers-routing.module';
 
 import { FplayersPage } from './fplayers.page';
 
+import { CoreModule } from '../../core/core.module';
+
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
+    CoreModule,
     FplayersPageRoutingModule
   ],
   declarations: [FplayersPage]

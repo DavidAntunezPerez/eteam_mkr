@@ -1,13 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Player } from '../../models/player.model';
+import { Player } from '../../models';
 
 @Component({
   selector: 'app-playerlist',
   templateUrl: './playerlist.component.html',
   styleUrls: ['./playerlist.component.scss'],
 })
-export class PlayerlistComponent implements OnInit {
-
+export class PlayerListComponent implements OnInit {
   @Input() ply: Player;
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete

@@ -8,13 +8,14 @@ import { FteamsPageRoutingModule } from './fteams-routing.module';
 
 import { FteamsPage } from './fteams.page';
 
+import { CoreModule } from '../../core/core.module';
+
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    FteamsPageRoutingModule
+    CoreModule,
+    FteamsPageRoutingModule,
+    
   ],
-  declarations: [FteamsPage]
+  declarations: [FteamsPage],
 })
 export class FteamsPageModule {}

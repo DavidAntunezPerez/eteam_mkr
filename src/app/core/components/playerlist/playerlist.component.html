@@ -1,3 +1,9 @@
-<p>
-  playerlist works!
-</p>
+<ion-item>
+  <ion-avatar>
+    <img *ngIf="!ply.picture" alt="Default person picture" src="../../../../assets/icon/default-player.png"/>
+    <img *ngIf="ply.picture" alt="Custom person picture" [src]="ply.picture" />
+  </ion-avatar>
+  <ion-label>{{ply.name}} '{{ply.nick}}' {{ply.surname}} <br><ion-text color="medium">{{ply.role}}</ion-text></ion-label>
+  <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="ellipsis-horizontal-circle-outline" ></ion-icon></ion-button>
+  <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-circle-outline" ></ion-icon></ion-button>
+</ion-item>

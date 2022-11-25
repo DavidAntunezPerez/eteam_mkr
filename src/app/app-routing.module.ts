@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
       path: 'home',
-      loadChildren: () => import('./core/pages/home/home.module').then( m => m.HomePageModule)
+      loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
     },
     {
       path: '',
@@ -13,23 +13,23 @@ const routes: Routes = [
     },
     {
       path: 'players',
-      loadChildren: () => import('./core/pages/players/players.module').then( m => m.PlayersPageModule)
+      loadChildren: () => import('./pages/players/players.module').then( m => m.PlayersPageModule)
     },
     {
       path: 'teams',
-      loadChildren: () => import('./core/pages/teams/teams.module').then( m => m.TeamsPageModule)
+      loadChildren: () => import('./pages/teams/teams.module').then( m => m.TeamsPageModule)
     },
     {
       path: 'news',
-      loadChildren: () => import('./core/pages/news/news.module').then( m => m.NewsPageModule)
+      loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
     },
     {
       path: 'favteams',
-      loadChildren: () => import('./core/pages/fteams/fteams.module').then( m => m.FteamsPageModule)
+      loadChildren: () => import('./pages/fteams/fteams.module').then( m => m.FteamsPageModule)
     },
     {
       path: 'favplayers',
-      loadChildren: () => import('./core/pages/fplayers/fplayers.module').then( m => m.FplayersPageModule)
+      loadChildren: () => import('./pages/fplayers/fplayers.module').then( m => m.FplayersPageModule)
     },
 
 ];

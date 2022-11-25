@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Player</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce the name" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Surname
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce the surname" formControlName="surname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Nickname
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce player's nickname" formControlName="nick"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Age
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce player's age" formControlName="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        KDA
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce player's KDA" formControlName="kda"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Role
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce player's role" formControlName="role"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Picture
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
+    </ion-item>
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+  </form>
+</ion-content>
