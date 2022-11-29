@@ -57,7 +57,7 @@ export class PlayersPage implements OnInit {
     this.presentPersonForm(null!);
   }
 
-  onEditPerson(player: Player) {
+  onEditPlayer(player: Player) {
     // edit player function
     this.presentPersonForm(player);
   }
@@ -80,7 +80,9 @@ export class PlayersPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            this.playerinfo.deletePlayerById(player.id);
+            if(player.id){
+              this.playerinfo.deletePlayerById(player.id);
+            }
           },
         },
       ],
@@ -116,10 +118,5 @@ export class PlayersPage implements OnInit {
     // if (!this.assgnSvc.getAssignmentsByPlayerId(player.id).length)
     //   this.onDeleteAlert(person);
     // else this.onPersonExistsAlert(person);
-  }
-
-  onEditPlayer(player: Player) {
-    // edit player function
-    this.presentPersonForm(player);
   }
 }

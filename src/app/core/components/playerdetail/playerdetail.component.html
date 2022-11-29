@@ -3,7 +3,7 @@
     <ion-title>Edit Player</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onDismiss()">
-        <ion-icon name="close-outline"></ion-icon>
+        <ion-icon style="color:rgb(207, 63, 63);" name="close-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -52,6 +52,8 @@
       </ion-label>
       <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
     </ion-item>
-    <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    <div class="container">
+      <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    </div>
   </form>
 </ion-content>

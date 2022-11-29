@@ -1,6 +1,6 @@
 // MODEL FOR PLAYERS
 export interface Player {
-  id: number;
+  id?: number;
   name: String;
   surname: String;
   nick: String; // player in-game nickname
