@@ -47,7 +47,7 @@ export class PlayerDetailComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    this.modal.dismiss({ person: this.form.value, mode: this.mode }, 'ok');
+    this.modal.dismiss({ player: this.form.value, mode: this.mode }, 'ok');
   }
 
   // DISMISS FORM FUNCTION

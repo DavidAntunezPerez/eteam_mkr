@@ -88,7 +88,7 @@ export class PlayerService {
   addPlayer(ply: Player) {
     // adds a new player
     this.id++;
-    console.log(this.id);
+    console.log(ply);
     ply.id = this.id;
     this.player.push(ply);
     this.playerSubject.next(this.player);

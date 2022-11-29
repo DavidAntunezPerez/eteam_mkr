@@ -41,6 +41,7 @@ export class PlayersPage implements OnInit {
       if (result && result.data) {
         switch (result.data.mode) {
           case 'New':
+            console.log(result.data)
             this.playerinfo.addPlayer(result.data.player);
             break;
           case 'Edit':
