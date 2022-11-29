@@ -65,10 +65,12 @@ export class PlayersPage implements OnInit {
   async onDeleteAlert(player: Player) {
     const alert = await this.alert.create({
       header: 'Do you want to delete this person?',
+      cssClass: 'alertDelete',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
+          cssClass: 'alertCancel',
           handler: () => {
             console.log('Operation cancelled');
           },
@@ -76,6 +78,7 @@ export class PlayersPage implements OnInit {
         {
           text: 'Delete',
           role: 'confirm',
+          cssClass: 'alertConfirm',
           handler: () => {
             this.playerinfo.deletePlayerById(player.id);
           },

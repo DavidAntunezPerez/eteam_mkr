@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// ALERTS STYLE
+.alertDelete{
+    button.alertConfirm{
+      color: #ff2f4a;
+    }
+    button.alertCancel{
+      color: rgb(89, 89, 95);
+    }
+ }
