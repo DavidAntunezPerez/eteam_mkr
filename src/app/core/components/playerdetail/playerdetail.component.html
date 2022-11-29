@@ -52,6 +52,6 @@
       </ion-label>
       <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
     </ion-item>
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
   </form>
 </ion-content>

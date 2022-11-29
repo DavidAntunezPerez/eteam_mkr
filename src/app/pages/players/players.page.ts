@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Player, PlayerService, PlayerDetailComponent } from '../../core/index';
+import { Player, PlayerService, PlayerDetailComponent} from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
 // import { AssignService } from '../../core/services';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-players',
@@ -15,13 +15,13 @@ export class PlayersPage implements OnInit {
     private modal: ModalController,
     private alert: AlertController,
     // private assgnSvc:AssignService,
-    private translateService: TranslateService
+    // private translateService: TranslateService
   ) {}
   // TRANSLATE
-  language: string = this.translateService.currentLang;
-  languageChange() {
-    this.translateService.use(this.language);
-  }
+  // language: string = this.translateService.currentLang;
+  // languageChange() {
+  //   this.translateService.use(this.language);
+  // }
 
   ngOnInit() {}
 
@@ -31,7 +31,7 @@ export class PlayersPage implements OnInit {
 
   async presentPersonForm(player: Player) {
     const modal = await this.modal.create({
-      component: PlayerDetailComponent, // add detail comp
+      component: PlayerDetailComponent,
       componentProps: {
         player: player,
       },
@@ -115,7 +115,8 @@ export class PlayersPage implements OnInit {
     // else this.onPersonExistsAlert(person);
   }
 
-  onEditPlayer(player : Player){
-
+  onEditPlayer(player: Player) {
+    // edit player function
+    this.presentPersonForm(player);
   }
 }
