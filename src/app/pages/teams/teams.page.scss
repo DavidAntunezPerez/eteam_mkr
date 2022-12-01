@@ -1,9 +1,18 @@
 // dark color toolbar
-ion-toolbar, ion-content{
+ion-toolbar, ion-content {
   --background: rgb(46, 46, 46);
   --background-checked: #7a49a5;
 
   --handle-background: #7a49a5;
   --handle-background-checked: #000;
   color: white;
+}
+ion-button{
+  margin:10px;
+  width:65px;
+  height:65px;
+  --border-radius:50%;
+  position: absolute;
+  right:0;
+  bottom:0;
 }

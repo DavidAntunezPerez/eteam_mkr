@@ -80,7 +80,7 @@ export class PlayerService {
   }
 
   deletePlayerById(id: number) {
-    // delete person by ID
+    // delete player by ID
     this.player = this.player.filter((ply) => ply.id != id);
     this.playerSubject.next(this.player);
   }

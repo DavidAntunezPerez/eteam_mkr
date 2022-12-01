@@ -22,7 +22,6 @@ export class TeamService{
       tag: 'MRDS',
       coach: 'Galder "bladE" Barcena',
       wr: '56.7%',
-      picture: 'https://img-cdn.hltv.org/teamlogo/Y37ZjhQhf-74eg44YCXe_m.png?ixlib=java-2.1.0&w=100&s=07c7f78adddce9861546f8facb29e5ba',
     },
     {
       id: 2,
@@ -31,6 +30,7 @@ export class TeamService{
       titles: 'x1 Crossfire Cup, x5 Mid Season International',
       coach: 'Sweden Daniel "djL" Narancic',
       wr: '43.2%',
+      picture: 'https://upload.wikimedia.org/wikipedia/fr/thumb/7/7e/NIP-Symbol-RGB-Neon_Yellow.svg/1200px-NIP-Symbol-RGB-Neon_Yellow.svg.png'
     },
   ];
   private teamSubject:BehaviorSubject<Team[]> = new BehaviorSubject(this.team);
