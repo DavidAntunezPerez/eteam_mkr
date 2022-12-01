@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Players', url: '/players', icon: 'person' },
     { title: 'Teams', url: '/teams', icon: 'shield-half' },
-    { title: 'Roster News', url: '/news', icon: 'pencil' },
+    { title: 'Rosters', url: '/rosters', icon: 'people-circle' },
     { title: 'Fav.Players', url: '/favplayers', icon: 'heart' },
     { title: 'Fav.Teams', url: '/favteams', icon: 'star' },
   ];

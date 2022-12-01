@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NewsPageRoutingModule } from './news-routing.module';
+import { RostersPageRoutingModule } from './rosters-routing.module';
 
-import { NewsPage } from './news.page';
+import { RostersPage } from './rosters.page';
 
 import { CoreModule } from '../../core/core.module';
 @NgModule({
   imports: [
     CoreModule,
-    NewsPageRoutingModule,
+    RostersPageRoutingModule,
     
   ],
-  declarations: [NewsPage]
+  declarations: [RostersPage]
 })
 export class NewsPageModule {}

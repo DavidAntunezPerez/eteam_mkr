@@ -20,8 +20,8 @@ const routes: Routes = [
       loadChildren: () => import('./pages/teams/teams.module').then( m => m.TeamsPageModule)
     },
     {
-      path: 'news',
-      loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
+      path: 'rosters',
+      loadChildren: () => import('./pages/rosters/rosters.module').then( m => m.NewsPageModule)
     },
     {
       path: 'favteams',

@@ -117,7 +117,7 @@ export class TeamsPage implements OnInit {
     // delete team function
     this.onDeleteAlert(team);
 
-    // if (!this.assgnSvc.getAssignmentsByPlayerId(player.id).length)
+    // if (!this.assgnSvc.getRostersByPlayerId(player.id).length)
     //   this.onDeleteAlert(person);
     // else this.onPersonExistsAlert(person);
   }

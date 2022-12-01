@@ -28,6 +28,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "ionicons": "^6.0.3",
+    "moment-timezone": "^0.5.39",
     "rxjs": "~7.5.0",
     "translate": "^1.4.1",
     "tslib": "^2.3.0",

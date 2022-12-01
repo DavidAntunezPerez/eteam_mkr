@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-rosters',
+  templateUrl: './rosters.page.html',
+  styleUrls: ['./rosters.page.scss'],
+})
+export class RostersPage implements OnInit {
+
+  // THIS IS THE ROSTERS PAGE, THIS PAGE WILL CONTAIN ALL DIFERENT ROSTERS, WHICH CONSIST OF A TEAM AND ONE OR MORE PLAYERS (DEPENDING ON THE SITUATION, GAME...). EVERY TEAM WILL BE IN THIS PAGE WITH SOME OR ANY PLAYERS, BUT NOT ALL THE PLAYERS WILL BE IN THIS PAGE, SOME PLAYERS HAVE NO TEAM (USUALLY WE SAY THEY ARE LFT (LOOKING FOR TEAM)), SO THEY WILL NOT APPEAR IN HERE. IN THIS PAGE YOU WILL BE ABLE TO CHECK TEAM ROSTERS AND DELETE SOME PLAYERS FROM IT (FIRE THE PLAYER FROM THE TEAM).
+  
+  
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

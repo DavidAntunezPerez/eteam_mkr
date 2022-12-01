@@ -116,7 +116,7 @@ export class PlayersPage implements OnInit {
     // delete player function
     this.onDeleteAlert(player);
 
-    // if (!this.assgnSvc.getAssignmentsByPlayerId(player.id).length)
+    // if (!this.assgnSvc.getRostersByPlayerId(player.id).length)
     //   this.onDeleteAlert(person);
     // else this.onPersonExistsAlert(person);
   }
