@@ -2,11 +2,13 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { PlayerDetailComponent, PlayerListComponent } from 'src/app/core';
+import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent } from 'src/app/core';
 @NgModule({
   declarations: [
     PlayerListComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    TeamDetailComponent , 
+    TeamListComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,9 @@ import { PlayerDetailComponent, PlayerListComponent } from 'src/app/core';
     IonicModule,
     ReactiveFormsModule,
     PlayerListComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    TeamDetailComponent, 
+    TeamListComponent,
   ],
   providers:[
     {

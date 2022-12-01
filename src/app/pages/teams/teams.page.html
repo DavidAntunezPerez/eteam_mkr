@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content>
-
+ <!-- TEAM LIST CONTENT -->
+  <app-teamlist *ngFor="let tsk of getTeam()" [tsk]="tsk" (onDelete)="onDeleteTeam($event)" (onEdit) ="onEditTeam($event)"></app-teamlist>
 </ion-content>
+  
+<!-- BUTTON RIGHT BOTTOM TO ADD -->
+<ion-button (click)="onNewTeam()" slot="start" icon-only color="warning">
+  <ion-icon style="zoom:2" name="add-outline"></ion-icon>
+</ion-button>

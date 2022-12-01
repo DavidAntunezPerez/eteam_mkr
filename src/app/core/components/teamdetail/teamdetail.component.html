@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Team</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss()">
+        <ion-icon style="color:rgb(207, 63, 63);" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce the team name" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Tag
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce the team tag" formControlName="tag"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Titles
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce team titles (leave blank if none)" formControlName="titles"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Coach
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce team coach's username" formControlName="coach"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        WinRatio
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce team's winratio" formControlName="wr"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Picture
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
+    </ion-item>
+    <div class="container">
+      <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    </div>
+  </form>
+</ion-content>
