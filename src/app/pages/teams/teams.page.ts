@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Team, TeamService, TeamDetailComponent} from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
-// import { AssignService } from '../../core/services';
+import { RosterService } from '../../core';
 // import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,7 +15,7 @@ export class TeamsPage implements OnInit {
     private teaminfo: TeamService,
     private modal: ModalController,
     private alert: AlertController,
-    // private assgnSvc:AssignService,
+    private rosterSvc:RosterService,
     // private translateService: TranslateService
   ) {}
   // TRANSLATE
@@ -95,31 +95,30 @@ export class TeamsPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  // async onPersonExistsAlert(task) {
-  //   const alert = await this.alert.create({
-  //     header: 'Error',
-  //     message: 'Cannot delete this person because its assigned to a task.',
-  //     buttons: [
-  //       {
-  //         text: 'Close',
-  //         role: 'close',
-  //         handler: () => {},
-  //       },
-  //     ],
-  //   });
+  async onTeamExistsAlert(team:any) {
+    const alert = await this.alert.create({
+      header: 'Error',
+      message: 'Cannot delete this team because it has signed players.',
+      cssClass:'alertDelete',
+      buttons: [
+        {
+          cssClass:'alertConfirm',
+          text: 'Close',
+          role: 'close',
+          handler: () => {},
+        },
+      ],
+    });
 
-  //   await alert.present();
+    await alert.present();
 
-  //   const { role } = await alert.onDidDismiss();
-  // }
+    const { role } = await alert.onDidDismiss();
+  }
 
   onDeleteTeam(team : Team) {
-    // delete team function
-    this.onDeleteAlert(team);
-
-    // if (!this.assgnSvc.getRostersByPlayerId(player.id).length)
-    //   this.onDeleteAlert(person);
-    // else this.onPersonExistsAlert(person);
+    if (!this.rosterSvc.getRostersByTeamId(team.id).length)
+      this.onDeleteAlert(team);
+    else this.onTeamExistsAlert(team);
   }
 
 }

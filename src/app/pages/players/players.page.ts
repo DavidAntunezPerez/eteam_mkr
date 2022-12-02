@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Player, PlayerService, PlayerDetailComponent} from '../../core';
+import { Player, PlayerService, PlayerDetailComponent, RosterService} from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
-// import { AssignService } from '../../core/services';
 // import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -14,7 +13,7 @@ export class PlayersPage implements OnInit {
     private playerinfo: PlayerService,
     private modal: ModalController,
     private alert: AlertController,
-    // private assgnSvc:AssignService,
+    private rosterSvc:RosterService,
     // private translateService: TranslateService
   ) {}
   // TRANSLATE
@@ -94,30 +93,30 @@ export class PlayersPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  // async onPersonExistsAlert(task) {
-  //   const alert = await this.alert.create({
-  //     header: 'Error',
-  //     message: 'Cannot delete this person because its assigned to a task.',
-  //     buttons: [
-  //       {
-  //         text: 'Close',
-  //         role: 'close',
-  //         handler: () => {},
-  //       },
-  //     ],
-  //   });
+  async onPlayerExistsAlert(player:any) {
+    const alert = await this.alert.create({
+      header: 'Error',
+      message: 'Cannot delete this player because its signed in a team.',
+      cssClass:'alertDelete',
+      buttons: [
+        {
+          text: 'Close',
+          cssClass:'alertConfirm',
+          role: 'close',
+          handler: () => {},
+        },
+      ],
+    });
 
-  //   await alert.present();
+    await alert.present();
 
-  //   const { role } = await alert.onDidDismiss();
-  // }
+    const { role } = await alert.onDidDismiss();
+  }
 
   onDeletePlayer(player : Player) {
-    // delete player function
-    this.onDeleteAlert(player);
-
-    // if (!this.assgnSvc.getRostersByPlayerId(player.id).length)
-    //   this.onDeleteAlert(person);
-    // else this.onPersonExistsAlert(person);
+    // delete player function;
+    if (!this.rosterSvc.getRostersByPlayerId(player.id).length)
+      this.onDeleteAlert(player);
+    else this.onPlayerExistsAlert(player);
   }
 }

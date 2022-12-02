@@ -59,11 +59,11 @@ export class RosterService {
     return this.roster.find((r) => r.id == id);
   }
 
-  getRostersByTaskId(idTeam: number): Roster[] {
+  getRostersByTeamId(idTeam: number): Roster[] {
     return this.roster.filter((r) => r.idTeam == idTeam);
   }
 
-  getRostersByPersonId(idPlayer: number): Roster[] {
+  getRostersByPlayerId(idPlayer: number): Roster[] {
     return this.roster.filter((r) => r.idPlayer == idPlayer);
   }
 
