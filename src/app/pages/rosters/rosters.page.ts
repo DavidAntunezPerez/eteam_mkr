@@ -61,10 +61,12 @@ export class RostersPage implements OnInit {
   async onDeleteAlert(roster:any) {
     const alert = await this.alert.create({
       header: 'Do you want to fire this player?',
+      cssClass: 'alertDelete',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
+          cssClass: 'alertCancel',
           handler: () => {
             console.log('Operation cancelled');
           },
@@ -72,6 +74,7 @@ export class RostersPage implements OnInit {
         {
           text: 'Delete',
           role: 'confirm',
+          cssClass: 'alertConfirm',
           handler: () => {
             this.rosterSvc.deleteRosterById(roster.id);
           },

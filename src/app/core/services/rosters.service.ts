@@ -9,31 +9,31 @@ import { BehaviorSubject } from 'rxjs';
 export class RosterService {
   private roster: Roster[] = [
     {
-      id: 0,
+      id: 1,
       idPlayer: 0,
       idTeam: 1,
       joinDate: moment().toISOString(),
     },
     {
-      id: 1,
+      id: 2,
       idPlayer: 1,
       idTeam: 3,
       joinDate: moment().toISOString(),
     },
     {
-      id: 2,
+      id: 3,
       idPlayer: 2,
       idTeam: 2,
       joinDate: moment().toISOString(),
     },
     {
-      id: 2,
+      id: 4,
       idPlayer: 3,
       idTeam: 3,
       joinDate: moment().toISOString(),
     },
     {
-      id: 0,
+      id: 5,
       idPlayer: 4,
       idTeam: 2,
       joinDate: moment().toISOString(),
