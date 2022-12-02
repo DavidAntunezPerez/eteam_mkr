@@ -11,31 +11,31 @@ export class RosterService {
     {
       id: 0,
       idPlayer: 0,
-      idTeam: 0,
+      idTeam: 1,
       joinDate: moment().toISOString(),
     },
     {
       id: 1,
       idPlayer: 1,
-      idTeam: 2,
+      idTeam: 3,
       joinDate: moment().toISOString(),
     },
     {
       id: 2,
       idPlayer: 2,
-      idTeam: 0,
+      idTeam: 2,
       joinDate: moment().toISOString(),
     },
     {
-      id: 3,
+      id: 2,
       idPlayer: 3,
-      idTeam: 1,
+      idTeam: 3,
       joinDate: moment().toISOString(),
     },
     {
-      id: 4,
+      id: 0,
       idPlayer: 4,
-      idTeam: 1,
+      idTeam: 2,
       joinDate: moment().toISOString(),
     },
   ];
@@ -47,7 +47,7 @@ export class RosterService {
 
   constructor() {}
 
-  id: number = this.roster.length + 1;
+  id: number = this.roster.length;
 
   // METHODS
 
@@ -73,7 +73,8 @@ export class RosterService {
   }
 
   addRoster(roster: Roster) {
-    roster.id = this.id++;
+    this.id++;
+    roster.id = this.id;
     this.roster.push(roster);
     this.rostersSubject.next(this.roster);
   }

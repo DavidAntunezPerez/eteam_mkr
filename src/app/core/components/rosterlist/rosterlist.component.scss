@@ -1,0 +1,26 @@
+ion-avatar {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  margin-right: 10px;
+}
+
+ion-item, ion-list{
+  --background: #1f2029;
+  color: #c4c3ca;
+}
+
+.joint{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(293deg) brightness(110%) contrast(101%);
+}
+
+#date{
+  display: block;
+}
+
+// IN CASE OF PHONE VIEW, DATE WILL NOT BE SHOWN BECAUSE OF THE LACK OF SPACE
+@media only screen and (max-width: 600px) {
+  #date{
+    display: none;
+  }
+}

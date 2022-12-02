@@ -1,0 +1,30 @@
+<ion-item>
+  <ion-avatar class="team">
+    <img *ngIf="!getTeam()?.picture" alt="Silhouette of Team" src="../../../../assets/icon/default-team.png" />
+    <img *ngIf="getTeam()?.picture" alt="Custom picture" [src]="getTeam().picture" />
+  </ion-avatar>
+  <ion-icon name="link-outline" class="joint"></ion-icon>
+  <ion-avatar class="player">
+    <img *ngIf="!getPlayer()?.picture" alt="Silhouette of a player" src="../../../../assets/icon/default-player.png" />
+    <img *ngIf="getPlayer()?.picture" alt="Player custom picture" [src]="getPlayer().picture" />
+  </ion-avatar>
+  <ion-label id="date" class="ion-text-center ion-text-wrap">{{roster.joinDate | date:'short'}}</ion-label>
+  <!-- BUTTONS -->
+  <ion-button icon-only fill="clear" (click)="onEditClick()">
+    <ion-icon style="zoom:1.5" name="ellipsis-horizontal-circle-outline"></ion-icon>
+  </ion-button>
+  <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()">
+    <ion-icon style="zoom:1.5" name="close-circle-outline"></ion-icon>
+  </ion-button>
+</ion-item>
+
+<ion-item-options>
+  <ion-item-option (click)="onEditClick()">
+    <ion-icon slot="top" name="create"></ion-icon>
+    {{'Edit' | uppercase}}
+  </ion-item-option>
+  <ion-item-option (click)="onDeleteClick()" color="danger">
+    <ion-icon slot="top" name="trash"></ion-icon>
+    {{'Delete' | uppercase}}
+  </ion-item-option>
+</ion-item-options>

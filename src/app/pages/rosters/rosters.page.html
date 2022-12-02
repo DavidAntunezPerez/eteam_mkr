@@ -8,5 +8,10 @@
 </ion-header>
 
 <ion-content>
-  
+    <app-rosterlist *ngFor="let roster of getRosters()" [roster]="roster" (onEdit)="onEditRoster($event)" (onDelete)="onDeleteRoster($event)"></app-rosterlist>
 </ion-content>
+  
+<!-- BUTTON RIGHT BOTTOM TO ADD
+<ion-button (click)="onNewRoster()" slot="start" icon-only color="warning">
+  <ion-icon style="zoom:2" name="add-outline"></ion-icon>
+</ion-button> -->

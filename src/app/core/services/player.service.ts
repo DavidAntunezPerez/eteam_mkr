@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class PlayerService {
   private player: Player[] = [
     {
-      id: 0,
+      id: 1,
       name: 'Oleksandr',
       surname: 'Kostyliev',
       nick: 's1mple',
@@ -19,7 +19,7 @@ export class PlayerService {
         'https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3',
     },
     {
-      id: 1,
+      id: 2,
       name: 'Kenny',
       surname: 'Schrub',
       nick: 'KennyS',
@@ -30,7 +30,7 @@ export class PlayerService {
         'https://img-cdn.hltv.org/playerbodyshot/Ff2gUR7tQRW-6_nkTfxZdu.png?ixlib=java-2.1.0&w=400&s=f090fb981261e3c5516606d3b0139b41',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Patrik',
       surname: 'Lindberg',
       nick: 'f0rest',
@@ -39,7 +39,7 @@ export class PlayerService {
       role: 'IGL & Support',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Oscar',
       surname: 'Cañellas',
       nick: 'm1xwell',
@@ -50,7 +50,7 @@ export class PlayerService {
         'https://img-cdn.hltv.org/playerbodyshot/TFAU5GadOux7ZMV8XCTQwY.png?ixlib=java-2.1.0&w=400&s=8ff7347bb305f218b9cfed4999e2b6f0',
     },
     {
-      id: 4,
+      id: 5,
       name: 'Tarik',
       surname: 'Celik',
       nick: 'tarik',

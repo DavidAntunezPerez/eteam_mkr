@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class TeamService{
   team : Team[] = [  
     {
-      id: 0,
+      id: 1,
       name: 'Fnatic',
       tag: 'FNC',
       titles: 'x2 World Championships, x1 Majors',
@@ -17,14 +17,14 @@ export class TeamService{
       picture: 'https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e',
     },
     {
-      id: 1,
+      id: 2,
       name: 'Movistar Riders',
       tag: 'MRDS',
       coach: 'Galder "bladE" Barcena',
       wr: '56.7%',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Ninjas in Pyjamas',
       tag: 'NIP',
       titles: 'x1 Crossfire Cup, x5 Mid Season International',

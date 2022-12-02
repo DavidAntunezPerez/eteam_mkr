@@ -3,7 +3,7 @@
     <img *ngIf="!tam.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png"/>
     <img *ngIf="tam.picture" alt="Custom team picture" [src]="tam.picture" />
   </ion-avatar>
-  <ion-label>[{{tam.tag}}] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} winratio</ion-text></ion-label>
+  <ion-label>[{{tam.tag}}] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} WinRatio</ion-text></ion-label>
   <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="ellipsis-horizontal-circle-outline" ></ion-icon></ion-button>
   <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-circle-outline" ></ion-icon></ion-button>
 </ion-item>
