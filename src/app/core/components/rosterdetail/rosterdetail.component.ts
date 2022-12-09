@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Player } from '../../models';
+import { Roster } from '../../.';
 import { ModalController } from '@ionic/angular';
 // import { TranslateService } from '@ngx-translate/core';
 
@@ -14,16 +14,12 @@ export class RosterDetailComponent implements OnInit {
   form: FormGroup; // CREATE FORM
   mode: 'New' | 'Edit' = 'New';
 
-  @Input('person') set person(ply: Player) {
-    if (ply) {
-      this.form.controls['id'].setValue(ply.id);
-      this.form.controls['name'].setValue(ply.name);
-      this.form.controls['surname'].setValue(ply.surname);
-      this.form.controls['nick'].setValue(ply.nick);
-      this.form.controls['age'].setValue(ply.age);
-      this.form.controls['kda'].setValue(ply.kda);
-      this.form.controls['role'].setValue(ply.role);
-      this.form.controls['picture'].setValue(ply.picture);
+  @Input('roster') set roster(rst: Roster) {
+    if (rst) {
+      this.form.controls['id'].setValue(rst.id);
+      this.form.controls['idPlayer'].setValue(rst.idPlayer);
+      this.form.controls['idTeam'].setValue(rst.idTeam);
+      this.form.controls['joinDate'].setValue(rst.joinDate);
       this.mode = 'Edit';
     }
   }
@@ -31,26 +27,29 @@ export class RosterDetailComponent implements OnInit {
   constructor(private formBld: FormBuilder, private modal: ModalController, 
     // private translateService: TranslateService
     ) {
-    this.form = this.formBld.group({
-      id:[null],
-      name: ['', [Validators.required]],
-      surname: ['', [Validators.required]],
-      sex: [''],
-      phone: [''],
-      picture: [''],
-    });
+      this.form = this.formBld.group({
+        id:[null],
+        idTeam:[-1, [Validators.min(1)]],
+        idPlayer:[-1, [Validators.min(1)]],
+        joinDate:['', [Validators.required]],
+      });
   }
 
   ngOnInit() {}
 
   onSubmit() {
-    this.modal.dismiss({ person: this.form.value, mode: this.mode }, 'ok');
+    this.modal.dismiss({ roster: this.form.value, mode: this.mode }, 'ok');
   }
 
   // DISMISS FORM FUNCTION
   onDismiss() {
     this.modal.dismiss(null, 'cancel');
   }
+
+  onChangeJoinDate(joinDate:any){
+    this.form.controls['joinDate'].setValue(joinDate);
+  }
+  
   // language: string = this.translateService.currentLang;
   // languageChange() {
   //   this.translateService.use(this.language);

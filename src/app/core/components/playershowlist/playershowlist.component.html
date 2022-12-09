@@ -1,0 +1,25 @@
+<ion-accordion-group [multiple]="true" #accordion>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="dark">
+      <ng-container *ngIf="selectedPlayer!=null">
+        <ion-avatar class="player">
+          <img *ngIf="!selectedPlayer?.picture" alt="Silhouette of a player" src="../../../../assets/icon/default-player.png" />
+          <img *ngIf="selectedPlayer?.picture" alt="Player picture" [src]="selectedPlayer.picture" />
+        </ion-avatar>
+        <ion-label>{{selectedPlayer.name}} '{{selectedPlayer.nick}}' {{selectedPlayer.surname}}</ion-label>
+      </ng-container>
+      <ion-label *ngIf="!selectedPlayer">Select a player</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-list>
+        <ion-item *ngFor="let player of getPlayer()" button detail  (click)="onPlayerClicked(player, accordion)">
+          <ion-avatar class="player">
+            <img *ngIf="!player.picture"  alt="Silhouette of a player" src="../../../../assets/icon/default-player.png" />
+            <img *ngIf="player.picture" alt="Player picture" [src]="player.picture" />
+          </ion-avatar>
+          <ion-label>{{player.name}} '{{player.nick}}' {{player.surname}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>

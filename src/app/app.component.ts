@@ -12,6 +12,7 @@ export class AppComponent {
     { title: 'Rosters', url: '/rosters', icon: 'people-circle' },
     { title: 'Fav.Players', url: '/favplayers', icon: 'heart' },
     { title: 'Fav.Teams', url: '/favteams', icon: 'star' },
+    { title: 'About', url: '/about', icon: 'information-circle' },
   ];
   constructor() {}
 }

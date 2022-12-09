@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Player Roster Page</ion-title>
+    <ion-title>Roster Signment Details</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onDismiss()">
         <ion-icon name="close-outline"></ion-icon>
@@ -11,7 +11,9 @@
 <ion-content class="ion-padding">
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
-    <app-dateshowlist formControlName="dateTime"></app-dateshowlist>
+    <app-playershowlist formControlName="idPlayer" name="idPlayer" ngDefaultControl></app-playershowlist>
+    <app-teamshowlist formControlName="idTeam" name="idTeam" ngDefaultControl></app-teamshowlist>
+    <app-dateshowlist formControlName="joinDate" name="joinDate" ngDefaultControl></app-dateshowlist>
     <ion-grid>
       <ion-row>
         <ion-col class="ion-text-center">

@@ -1,6 +1,6 @@
 <ion-accordion-group [multiple]="true" #accordion>
   <ion-accordion value="first">
-    <ion-item slot="header" color="light">
+    <ion-item slot="header" color="dark">
       <ng-container *ngIf="value">
         <ion-label>{{(date$ | async) | date:'short'}}</ion-label>
       </ng-container>
@@ -10,7 +10,7 @@
       <ion-datetime #datetime value="{{(date$ | async)}}" (ionChange)="onDateTimeChanged($event, accordion)">
         <ion-buttons slot="buttons">
           <ion-button color="danger" (click)="onCancel(datetime, accordion)">CANCEL</ion-button>
-          <ion-button color="primary" (click)="onConfirm(datetime, accordion)">DONE</ion-button>
+          <ion-button color="tertiary" (click)="onConfirm(datetime, accordion)">DONE</ion-button>
         </ion-buttons>
       </ion-datetime>
     </div>

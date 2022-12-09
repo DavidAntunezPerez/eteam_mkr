@@ -64,7 +64,7 @@ export class PlayersPage implements OnInit {
 
   async onDeleteAlert(player: Player) {
     const alert = await this.alert.create({
-      header: 'Do you want to delete this person?',
+      header: 'Do you want to delete this player?',
       cssClass: 'alertDelete',
       buttons: [
         {

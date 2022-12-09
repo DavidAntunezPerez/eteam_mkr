@@ -1,0 +1,25 @@
+<ion-accordion-group [multiple]="true" #accordion>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="dark">
+      <ng-container *ngIf="selectedTeam!=null">
+        <ion-avatar class="team">
+          <img *ngIf="!selectedTeam?.picture" alt="team default img" src="../../../../assets/icon/default-team.png" />
+          <img *ngIf="selectedTeam.picture" alt="team custom img" [src]="selectedTeam.picture" />
+        </ion-avatar>
+        <ion-label>[{{selectedTeam.tag}}] {{selectedTeam.name}} </ion-label>
+      </ng-container>
+      <ion-label *ngIf="!selectedTeam">Select a team</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-list>
+        <ion-item *ngFor="let team of getTeam()" button detail  (click)="onTeamClicked(team, accordion)">
+          <ion-avatar class="person">
+            <img *ngIf="!team.picture" alt="team default picture" src="../../../../assets/icon/default-team.png" />
+            <img *ngIf="team.picture" alt="team custom picture" [src]="team.picture" />
+          </ion-avatar>
+          <ion-label>[{{team.tag}}] {{team.name}} </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>

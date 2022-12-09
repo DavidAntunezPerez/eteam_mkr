@@ -2,7 +2,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent, RosterDetailComponent, RosterListComponent, DateShowListComponent } from 'src/app/core';
+import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent, RosterDetailComponent, RosterListComponent, DateShowListComponent, PlayerShowListComponent, TeamShowListComponent } from 'src/app/core';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,8 @@ import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , Team
     RosterDetailComponent,
     RosterListComponent,
     DateShowListComponent,
+    PlayerShowListComponent,
+    TeamShowListComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,8 @@ import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , Team
     RosterDetailComponent, 
     RosterListComponent,
     DateShowListComponent,
+    PlayerShowListComponent,
+    TeamShowListComponent,
   ],
   providers:[
     // {
