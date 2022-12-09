@@ -64,7 +64,7 @@ export class PlayerService {
   );
   public playerOsb = this.playerSubject.asObservable();
 
-  id: number = this.player.length;
+  id: number = this.player.length + 1;
   constructor() {}
 
   // METHODS
@@ -88,7 +88,6 @@ export class PlayerService {
   addPlayer(ply: Player) {
     // adds a new player
     this.id++;
-    console.log(ply);
     ply.id = this.id;
     this.player.push(ply);
     this.playerSubject.next(this.player);

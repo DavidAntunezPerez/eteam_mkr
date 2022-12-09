@@ -14,13 +14,14 @@ export class RosterDetailComponent implements OnInit {
   form: FormGroup; // CREATE FORM
   mode: 'New' | 'Edit' = 'New';
 
-  @Input('roster') set roster(rst: Roster) {
-    if (rst) {
-      this.form.controls['id'].setValue(rst.id);
-      this.form.controls['idPlayer'].setValue(rst.idPlayer);
-      this.form.controls['idTeam'].setValue(rst.idTeam);
-      this.form.controls['joinDate'].setValue(rst.joinDate);
+  @Input('roster') set roster(roster: Roster) {
+    if (roster) {
+      this.form.controls['id'].setValue(roster.id);
+      this.form.controls['idPlayer'].setValue(roster.idPlayer);
+      this.form.controls['idTeam'].setValue(roster.idTeam);
+      this.form.controls['joinDate'].setValue(roster.joinDate);
       this.mode = 'Edit';
+      console.log(roster)
     }
   }
 
@@ -29,8 +30,8 @@ export class RosterDetailComponent implements OnInit {
     ) {
       this.form = this.formBld.group({
         id:[null],
-        idTeam:[-1, [Validators.min(1)]],
-        idPlayer:[-1, [Validators.min(1)]],
+        idTeam:[0, [Validators.min(1)]],
+        idPlayer:[0, [Validators.min(1)]],
         joinDate:['', [Validators.required]],
       });
   }

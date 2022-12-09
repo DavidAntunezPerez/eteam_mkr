@@ -16,6 +16,7 @@ export class TeamDetailComponent implements OnInit {
 
   @Input('team') set team(tam: Team) {
     if (tam) {
+      console.log(tam);
       this.form.controls['id'].setValue(tam.id);
       this.form.controls['name'].setValue(tam.name);
       this.form.controls['tag'].setValue(tam.tag);

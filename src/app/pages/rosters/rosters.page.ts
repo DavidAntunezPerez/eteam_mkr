@@ -35,7 +35,7 @@ export class RostersPage implements OnInit {
     const modal = await this.modal.create({
       component: RosterDetailComponent,
       componentProps: {
-        assignment:roster
+        roster:roster
       },
     });
     modal.present();

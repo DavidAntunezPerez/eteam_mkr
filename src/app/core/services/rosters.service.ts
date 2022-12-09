@@ -47,7 +47,7 @@ export class RosterService {
 
   constructor() {}
 
-  id: number = this.roster.length;
+  id: number = this.roster.length + 1;
 
   // METHODS
 

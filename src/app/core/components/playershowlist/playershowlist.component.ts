@@ -27,9 +27,8 @@ export class PlayerShowListComponent implements OnInit, ControlValueAccessor {
 
 
   writeValue(obj: any): void {
-    
     this.selectedPlayer = this.plySvc.getPlayerById(obj);
-    console.log(this.selectedPlayer);
+    console.log(obj)
   }
   registerOnChange(fn: any): void {
     this.propagateChange = fn;
