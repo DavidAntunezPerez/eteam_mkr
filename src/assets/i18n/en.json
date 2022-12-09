@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "title": "Menu",
+    "home": "Home",
+    "players": "Players",
+    "teams": "Teams",
+    "rosters": "Rosters",
+    "fplayers": "Fav.Players",
+    "fteams": "Fav.Teams",
+    "about": "About"
+  }
+}

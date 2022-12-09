@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Players', url: '/players', icon: 'person' },
-    { title: 'Teams', url: '/teams', icon: 'shield-half' },
-    { title: 'Rosters', url: '/rosters', icon: 'people-circle' },
-    { title: 'Fav.Players', url: '/favplayers', icon: 'heart' },
-    { title: 'Fav.Teams', url: '/favteams', icon: 'star' },
-    { title: 'About', url: '/about', icon: 'information-circle' },
+    { title: 'menu.home', url: '/home', icon: 'home' },
+    { title: 'menu.players', url: '/players', icon: 'person' },
+    { title: 'menu.teams', url: '/teams', icon: 'shield-half' },
+    { title: 'menu.rosters', url: '/rosters', icon: 'people-circle' },
+    { title: 'menu.fplayers', url: '/favplayers', icon: 'heart' },
+    { title: 'menu.fteams', url: '/favteams', icon: 'star' },
+    { title: 'menu.about', url: '/about', icon: 'information-circle' },
   ];
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
 }
