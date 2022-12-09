@@ -90,4 +90,32 @@ export class RostersPage implements OnInit {
   onDeleteRoster(roster:any) {
     this.onDeleteAlert(roster);
   }
+
+  async presentRosterForm(roster: Roster) {
+    const modal = await this.modal.create({
+      component: RosterDetailComponent,
+      componentProps: {
+        roster: roster,
+      },
+    });
+    modal.present();
+    modal.onDidDismiss().then((result) => {
+      if (result && result.data) {
+        switch (result.data.mode) {
+          case 'New':
+            this.rosterSvc.addRoster(result.data.roster);
+            break;
+          case 'Edit':
+            this.rosterSvc.updateRoster(result.data.roster);
+            break;
+          default:
+        }
+      }
+    });
+  }
+
+  onNewRoster() {
+    // create a new roster new
+    this.presentRosterForm(null!);
+  }
 }
