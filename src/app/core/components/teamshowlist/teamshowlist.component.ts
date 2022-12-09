@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { Team, TeamService } from '../../.';
 
-export const TASK_PROFILE_VALUE_ACCESSOR: any = {
+export const TEAM_PROFILE_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => TeamShowListComponent),
   multi: true
@@ -13,6 +13,7 @@ export const TASK_PROFILE_VALUE_ACCESSOR: any = {
   selector: 'app-teamshowlist',
   templateUrl: './teamshowlist.component.html',
   styleUrls: ['./teamshowlist.component.scss'],
+  providers:[TEAM_PROFILE_VALUE_ACCESSOR],
 })
 
 export class TeamShowListComponent implements OnInit, ControlValueAccessor {

@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { Player,PlayerService } from '../../';
 
-export const USER_PROFILE_VALUE_ACCESSOR: any = {
+export const PLAYER_PROFILE_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => PlayerShowListComponent),
   multi: true
@@ -13,7 +13,7 @@ export const USER_PROFILE_VALUE_ACCESSOR: any = {
   selector: 'app-playershowlist',
   templateUrl: './playershowlist.component.html',
   styleUrls: ['./playershowlist.component.scss'],
-  providers:[USER_PROFILE_VALUE_ACCESSOR],
+  providers:[PLAYER_PROFILE_VALUE_ACCESSOR],
 })
 export class PlayerShowListComponent implements OnInit, ControlValueAccessor {
 
