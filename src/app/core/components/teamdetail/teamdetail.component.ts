@@ -14,16 +14,16 @@ export class TeamDetailComponent implements OnInit {
   form: FormGroup; // CREATE FORM
   mode: 'New' | 'Edit' = 'New';
 
-  @Input('team') set team(tam: Team) {
-    if (tam) {
-      console.log(tam);
-      this.form.controls['id'].setValue(tam.id);
-      this.form.controls['name'].setValue(tam.name);
-      this.form.controls['tag'].setValue(tam.tag);
-      this.form.controls['titles'].setValue(tam.titles);
-      this.form.controls['coach'].setValue(tam.coach);
-      this.form.controls['wr'].setValue(tam.wr);
-      this.form.controls['picture'].setValue(tam.picture);
+  @Input('team') set team(team: Team) {
+    if (team) {
+      console.log(team);
+      this.form.controls['id'].setValue(team.id);
+      this.form.controls['name'].setValue(team.name);
+      this.form.controls['tag'].setValue(team.tag);
+      this.form.controls['titles'].setValue(team.titles);
+      this.form.controls['coach'].setValue(team.coach);
+      this.form.controls['wr'].setValue(team.wr);
+      this.form.controls['picture'].setValue(team.picture);
       this.mode = 'Edit';
     }
   }

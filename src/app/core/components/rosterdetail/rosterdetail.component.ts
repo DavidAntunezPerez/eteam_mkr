@@ -21,7 +21,6 @@ export class RosterDetailComponent implements OnInit {
       this.form.controls['idTeam'].setValue(roster.idTeam);
       this.form.controls['joinDate'].setValue(roster.joinDate);
       this.mode = 'Edit';
-      console.log(roster)
     }
   }
 

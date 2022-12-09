@@ -28,6 +28,7 @@ export class TeamShowListComponent implements OnInit, ControlValueAccessor {
 
   writeValue(obj: any): void {
     this.selectedTeam = this.tamSvc.getTeamById(obj);
+    console.log(obj);
   }
   registerOnChange(fn: any): void {
     this.propagateChange = fn;

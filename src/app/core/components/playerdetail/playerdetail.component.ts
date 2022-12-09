@@ -15,7 +15,6 @@ export class PlayerDetailComponent implements OnInit {
 
   @Input('player') set player(ply: Player) {
     if (ply) {
-      console.log(ply)
       this.form.controls['id'].setValue(ply.id);
       this.form.controls['name'].setValue(ply.name);
       this.form.controls['surname'].setValue(ply.surname);

@@ -42,7 +42,6 @@ export class TeamsPage implements OnInit {
       if (result && result.data) {
         switch (result.data.mode) {
           case 'New':
-            console.log(result.data)
             this.teaminfo.addTeam(result.data.team);
             break;
           case 'Edit':
