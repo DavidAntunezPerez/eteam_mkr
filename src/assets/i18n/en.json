@@ -1,4 +1,13 @@
 {
+  "home": {
+    "languageChangePlaceholder": "Language...",
+    "title": "Home",
+    "maintext": "Create your own eSports League",
+    "createteams":"Create teams",
+    "or": "OR",
+    "createplayers": "Create players",
+    "madeby" : "Made by "
+  },
   "menu": {
     "title": "Menu",
     "home": "Home",

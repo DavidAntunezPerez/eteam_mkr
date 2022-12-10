@@ -9,7 +9,7 @@
   <!-- LINK ICON -->
   <link rel="shortcut icon" href="./images/scplogo.svg" type="image/x-icon">
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title  translate [translateParams]="{ language: language }">home.title</ion-title>
     <!-- MENU -->
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -17,7 +17,8 @@
     <!-- LANG SELECT -->
     <ion-buttons slot="end">
       <ion-item>
-        <ion-select interface="popover" [placeholder]='"Language..."'>
+        <ion-select interface="popover" [(ngModel)]='language' (ionChange)='languageChange()'
+          [placeholder]='"home.languageChangePlaceholder" | translate'>
           <ion-select-option value='en'>English</ion-select-option>
           <ion-select-option value='es'>Español</ion-select-option>
           <ion-select-option value='fr'>Français</ion-select-option>
@@ -29,21 +30,23 @@
 
 <ion-content>
   <!-- LOGO -->
-    <div class="logo">
-      <img src="../../../../assets/icon/homelogo.jpg" alt="eTeam Mkr Logo" class="m-auto">
-    </div>
+  <div class="logo">
+    <img src="../../../../assets/icon/homelogo.jpg" alt="eTeam Mkr Logo" class="m-auto">
+  </div>
   <div class="section text-center mb-4">
     <!-- CATCH-UP TEXT -->
-    <h4>Create your own eSports League</h4>
+    <h4 translate [translateParams]="{ language: language }">home.maintext</h4>
   </div>
   <div class="section text-center">
     <!-- DOUBLE CHOICE BUTTONS -->
-    <a routerDirection="root" [routerLink]="['/teams']" lines="none" detail="false" routerLinkActive="selected"  class="btn mb-3">
-      Create teams<i class="uil uil uil-shield-plus"></i>
+    <a translate [translateParams]="{ language: language }" routerDirection="root" [routerLink]="['/teams']" lines="none" detail="false" routerLinkActive="selected"
+      class="btn mb-3">
+      home.createteams<i class="uil uil uil-shield-plus"></i>
     </a>
-    <h4 class="mb-3">OR</h4>
-    <a routerDirection="root" [routerLink]="['/players']" lines="none" detail="false" routerLinkActive="selected" class="btn">
-      Create players<i class="input-icon uil uil-user-plus"></i>
+    <h4 translate [translateParams]="{ language: language }" class="mb-3">home.or</h4>
+    <a translate [translateParams]="{ language: language }" routerDirection="root" [routerLink]="['/players']" lines="none" detail="false" routerLinkActive="selected"
+      class="btn">
+      home.createplayers<i class="input-icon uil uil-user-plus"></i>
     </a>
   </div>
   <!-- FOOTER SECTION -->
@@ -62,8 +65,8 @@
               class="bi bi-envelope fs-5"></i></a></li>
       </ul>
       <!-- RIGHT -->
-      <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <span class="text-center">Made by <a href="https://www.github.com/DavidAntunezPerez" class="link">David
+      <div  class="col-md-6 d-flex align-items-center justify-content-center">
+        <span class="text-center"> <span translate [translateParams]="{ language: language }">home.madeby</span> <a href="https://www.github.com/DavidAntunezPerez" class="link">David
             Antúnez Pérez</a> </span>
       </div>
     </footer>

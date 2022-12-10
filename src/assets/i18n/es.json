@@ -1,0 +1,21 @@
+{
+  "home": {
+    "languageChangePlaceholder": "Idioma...",
+    "title": "Inicio",
+    "maintext": "Crea tu propia liga de eSports",
+    "createteams":"Crear equipos",
+    "or": "O",
+    "createplayers": "Crear jugadores",
+    "madeby" : "Hecho por "
+  },
+  "menu": {
+    "title": "Menú",
+    "home": "Inicio",
+    "players": "Jugadores",
+    "teams": "Equipos",
+    "rosters": "Mercado",
+    "fplayers": "Jugadores Fav.",
+    "fteams": "Equipos Fav.",
+    "about": "Acerca de"
+  }
+}
