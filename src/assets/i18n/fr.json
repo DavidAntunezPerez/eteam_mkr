@@ -76,8 +76,8 @@
   },
   "alerts":{
     "deleteplayer":"Voulez-vous supprimer ce joueur",
-    "deleteteam":"Voulez-vous supprimer cette équipe ?",
-    "fireplayer":"Voulez-vous botter ce joueur ?",
+    "deleteteam":"Voulez-vous supprimer cette équipe ?",
+    "fireplayer":"Voulez-vous botter ce joueur ?",
     "error":"Erreur",
     "close":"Fermer",
     "cannotdelete":"Impossible de supprimer le joueur car il fait partie d'une équipe.",
