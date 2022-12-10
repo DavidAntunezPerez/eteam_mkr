@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Team, TeamService, TeamDetailComponent} from '../../core';
+import { Team, TeamService, TeamDetailComponent } from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { RosterService } from '../../core';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teams',
@@ -10,19 +10,18 @@ import { RosterService } from '../../core';
   styleUrls: ['./teams.page.scss'],
 })
 export class TeamsPage implements OnInit {
-
   constructor(
     private teaminfo: TeamService,
     private modal: ModalController,
     private alert: AlertController,
-    private rosterSvc:RosterService,
-    // private translateService: TranslateService
+    private rosterSvc: RosterService,
+    private translateService: TranslateService
   ) {}
   // TRANSLATE
-  // language: string = this.translateService.currentLang;
-  // languageChange() {
-  //   this.translateService.use(this.language);
-  // }
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
   ngOnInit() {}
 
@@ -63,7 +62,7 @@ export class TeamsPage implements OnInit {
     this.presentPersonForm(team);
   }
 
-  async onDeleteAlert(team:Team) {
+  async onDeleteAlert(team: Team) {
     const alert = await this.alert.create({
       header: 'Do you want to delete this team?',
       cssClass: 'alertDelete',
@@ -81,7 +80,7 @@ export class TeamsPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            if(team.id){
+            if (team.id) {
               this.teaminfo.deleteTeamById(team.id);
             }
           },
@@ -94,14 +93,14 @@ export class TeamsPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  async onTeamExistsAlert(team:any) {
+  async onTeamExistsAlert(team: any) {
     const alert = await this.alert.create({
       header: 'Error',
       message: 'Cannot delete this team because it has signed players.',
-      cssClass:'alertDelete',
+      cssClass: 'alertDelete',
       buttons: [
         {
-          cssClass:'alertConfirm',
+          cssClass: 'alertConfirm',
           text: 'Close',
           role: 'close',
           handler: () => {},
@@ -114,10 +113,9 @@ export class TeamsPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  onDeleteTeam(team : Team) {
+  onDeleteTeam(team: Team) {
     if (!this.rosterSvc.getRostersByTeamId(team.id).length)
       this.onDeleteAlert(team);
     else this.onTeamExistsAlert(team);
   }
-
 }

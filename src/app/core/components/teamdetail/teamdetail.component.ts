@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Team } from '../../models';
 import { ModalController } from '@ionic/angular';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teamdetail',
@@ -31,7 +31,7 @@ export class TeamDetailComponent implements OnInit {
   constructor(
     private formBld: FormBuilder,
     private modal: ModalController,
-    // private translateService: TranslateService
+    private translateService: TranslateService
   ) {
     this.form = this.formBld.group({
       id: [null],
@@ -54,9 +54,9 @@ export class TeamDetailComponent implements OnInit {
   onDismiss() {
     this.modal.dismiss(null, 'cancel');
   }
-  // language: string = this.translateService.currentLang;
-  // languageChange() {
-  //   this.translateService.use(this.language);
-  // }
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
 }

@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent, RosterDetailComponent, RosterListComponent, DateShowListComponent, PlayerShowListComponent, TeamShowListComponent } from 'src/app/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from '../utils/translate';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,14 @@ import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , Team
     CommonModule,
     FormsModule,
     IonicModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   exports:[
     CommonModule,

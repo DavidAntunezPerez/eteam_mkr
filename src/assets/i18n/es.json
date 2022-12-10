@@ -17,5 +17,37 @@
     "fplayers": "Jugadores Fav.",
     "fteams": "Equipos Fav.",
     "about": "Acerca de"
+  },
+  "players":{
+    "title":"Jugadores",
+    "name": "Nombre",
+    "nameph":"Introduce el nombre del jugador",
+    "surname": "Apellidos",
+    "surnameph":"Introduce los apellidos del jugador",
+    "nickname":"Apodo",
+    "nicknameph":"Introduce el apodo del jugador",
+    "age":"Edad",
+    "ageph":"Introduce la edad del jugador",
+    "kda":"KDA",
+    "kdaph":"Introduce el KDA del jugador",
+    "role":"Rol",
+    "roleph":"Introduce el rol del jugador",
+    "picture":"Foto",
+    "pictureph":"Introduce una foto del jugador (Opcional)"
+  },
+  "teams": {
+    "title": "Equipos",
+    "name": "Nombre",
+    "nameph":"Introduce el nombre del equipo",
+    "tag": "Tag",
+    "tagph":"Introduce el tag del equipo",
+    "titles": "Títulos",
+    "titlesph":"Introduce los títulos del equipo (dejar en blanco si ninguno)",
+    "coach": "Entrenador",
+    "coachph":"Introduce el entrenador del equipo",
+    "wr": "Radio de Victorias",
+    "wrph":"Introduce el radio de victorias del equipo",
+    "picture": "Foto",
+    "pictureph":"Introduce una foto (Opcional)"
   }
 }

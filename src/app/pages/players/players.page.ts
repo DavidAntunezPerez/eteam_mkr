@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Player, PlayerService, PlayerDetailComponent, RosterService} from '../../core';
+import {
+  Player,
+  PlayerService,
+  PlayerDetailComponent,
+  RosterService,
+} from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 // import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -13,14 +19,14 @@ export class PlayersPage implements OnInit {
     private playerinfo: PlayerService,
     private modal: ModalController,
     private alert: AlertController,
-    private rosterSvc:RosterService,
-    // private translateService: TranslateService
+    private rosterSvc: RosterService,
+    private translateService: TranslateService
   ) {}
   // TRANSLATE
-  // language: string = this.translateService.currentLang;
-  // languageChange() {
-  //   this.translateService.use(this.language);
-  // }
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
   ngOnInit() {}
 
@@ -79,7 +85,7 @@ export class PlayersPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            if(player.id){
+            if (player.id) {
               this.playerinfo.deletePlayerById(player.id);
             }
           },
@@ -92,15 +98,15 @@ export class PlayersPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  async onPlayerExistsAlert(player:any) {
+  async onPlayerExistsAlert(player: any) {
     const alert = await this.alert.create({
       header: 'Error',
       message: 'Cannot delete this player because its signed in a team.',
-      cssClass:'alertDelete',
+      cssClass: 'alertDelete',
       buttons: [
         {
           text: 'Close',
-          cssClass:'alertConfirm',
+          cssClass: 'alertConfirm',
           role: 'close',
           handler: () => {},
         },
@@ -112,7 +118,7 @@ export class PlayersPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  onDeletePlayer(player : Player) {
+  onDeletePlayer(player: Player) {
     // delete player function;
     if (!this.rosterSvc.getRostersByPlayerId(player.id).length)
       this.onDeleteAlert(player);

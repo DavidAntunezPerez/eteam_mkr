@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Edit Team</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onDismiss()">
         <ion-icon style="color:rgb(207, 63, 63);" name="close-outline"></ion-icon>
@@ -11,40 +10,40 @@
 <ion-content class="ion-padding">
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">
-        Name
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.name
       </ion-label>
-      <ion-input type="text" placeholder="Introduce the team name" formControlName="name"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.nameph" | translate' formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Tag
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.tag
       </ion-label>
-      <ion-input type="text" placeholder="Introduce the team tag" formControlName="tag"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.tagph" | translate' formControlName="tag"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Titles
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.titles
       </ion-label>
-      <ion-input type="text" placeholder="Introduce team titles (leave blank if none)" formControlName="titles"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.titlesph" | translate' formControlName="titles"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Coach
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.coach
       </ion-label>
-      <ion-input type="text" placeholder="Introduce team coach's username" formControlName="coach"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.coachph" | translate'formControlName="coach"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        WinRatio
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.wr
       </ion-label>
-      <ion-input type="text" placeholder="Introduce team's winratio" formControlName="wr"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.wrph" | translate' formControlName="wr"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Picture
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        teams.picture
       </ion-label>
-      <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
+      <ion-input type="text" [placeholder]='"teams.pictureph" | translate' formControlName="picture"></ion-input>
     </ion-item>
     <div class="container">
       <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>

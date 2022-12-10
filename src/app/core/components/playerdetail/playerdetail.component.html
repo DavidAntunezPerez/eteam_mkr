@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Edit Player</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="onDismiss()">
         <ion-icon style="color:rgb(207, 63, 63);" name="close-outline"></ion-icon>
@@ -11,46 +10,46 @@
 <ion-content class="ion-padding">
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">
-        Name
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.name
       </ion-label>
-      <ion-input type="text" placeholder="Introduce the name" formControlName="name"></ion-input>
+      <ion-input type="text" [placeholder]='"players.nameph" | translate' formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Surname
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.surname
       </ion-label>
-      <ion-input type="text" placeholder="Introduce the surname" formControlName="surname"></ion-input>
+      <ion-input type="text" [placeholder]='"players.surnameph" | translate' formControlName="surname"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Nickname
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.nickname
       </ion-label>
-      <ion-input type="text" placeholder="Introduce player's nickname" formControlName="nick"></ion-input>
+      <ion-input type="text" [placeholder]='"players.nicknameph" | translate' formControlName="nick"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Age
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.age
       </ion-label>
-      <ion-input type="text" placeholder="Introduce player's age" formControlName="age"></ion-input>
+      <ion-input type="text" [placeholder]='"players.ageph" | translate' formControlName="age"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        KDA
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.kda
       </ion-label>
-      <ion-input type="text" placeholder="Introduce player's KDA" formControlName="kda"></ion-input>
+      <ion-input type="text" [placeholder]='"players.kdaph" | translate' formControlName="kda"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Role
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.role
       </ion-label>
-      <ion-input type="text" placeholder="Introduce player's role" formControlName="role"></ion-input>
+      <ion-input type="text" [placeholder]='"players.roleph" | translate' formControlName="role"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">
-        Picture
+      <ion-label position="floating" translate [translateParams]="{ language: language }">
+        players.picture
       </ion-label>
-      <ion-input type="text" placeholder="Introduce picture URL" formControlName="picture"></ion-input>
+      <ion-input type="text" [placeholder]='"players.pictureph" | translate' formControlName="picture"></ion-input>
     </ion-item>
     <div class="container">
       <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>

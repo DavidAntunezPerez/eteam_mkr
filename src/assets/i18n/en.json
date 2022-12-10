@@ -3,10 +3,10 @@
     "languageChangePlaceholder": "Language...",
     "title": "Home",
     "maintext": "Create your own eSports League",
-    "createteams":"Create teams",
+    "createteams": "Create teams",
     "or": "OR",
     "createplayers": "Create players",
-    "madeby" : "Made by "
+    "madeby": "Made by "
   },
   "menu": {
     "title": "Menu",
@@ -17,5 +17,37 @@
     "fplayers": "Fav.Players",
     "fteams": "Fav.Teams",
     "about": "About"
+  },
+  "players": {
+    "title": "Players",
+    "name": "Name",
+    "nameph": "Introduce the player's name",
+    "surname": "Surname",
+    "surnameph": "Introduce the player's surname",
+    "nickname": "Nickname",
+    "nicknameph": "Introuce the player's nickname",
+    "age": "Age",
+    "ageph": "Introduce the player's age",
+    "kda": "KDA",
+    "kdaph": "Introduce the player's KDA",
+    "role": "Role",
+    "roleph": "Introduce the player's role",
+    "picture": "Picture",
+    "pictureph": "Introduce the picture URL (Optional)"
+  },
+  "teams": {
+    "title": "Teams",
+    "name": "Name",
+    "nameph":"Introduce the team's name",
+    "tag": "Tag",
+    "tagph":"Introduce the team's tag",
+    "titles": "Titles",
+    "titlesph":"Introduce the team's titles (leave blank if none)",
+    "coach": "Coach",
+    "coachph":"Introduce the team's coach",
+    "wr": "WinRatio",
+    "wrph":"Introduce the team's win ratio",
+    "picture": "Picture",
+    "pictureph":"Introduce the picture URL (Optional)"
   }
 }
