@@ -5,7 +5,7 @@
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
 
-    <ion-title>About Me</ion-title>
+    <ion-title translate [translateParams]="{ language: language }">about.title</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,7 +22,7 @@
           </div>
 
           <h2>David Antúnez Pérez</h2>
-          <h3>2º DAM Student</h3>
+          <h3 translate [translateParams]="{ language: language }">about.role</h3>
         </div>
 
         <ul class="icons">
@@ -44,18 +44,16 @@
     </div>
 
     <div class="about-right">
-      <h1>About me<span>!</span></h1>
-      <h2>Here's who I am & what I do</h2>
+      <h1 translate [translateParams]="{ language: language }">about.aboutme<span>!</span></h1>
+      <h2 translate [translateParams]="{ language: language }">about.aboutmetitle</h2>
 
       <div class="about-para">
-        <p>I am a 19 year's old programming passionate student that aims to be one of the best programmers in the future. Born in
-          Málaga, at 14 started programming small little programs. My hobbies are playing videogames, paddle and also
-          watching eSports. I am currently studying Cross-Platform App Development in CPIFP Malaga Tech Park</p>
-        <p>
-          The project idea comes from ease the management of one of my favorite sectors, eSport world.
+        <p translate [translateParams]="{ language: language }">about.p1</p>
+        <p translate [translateParams]="{ language: language }">
+          about.p2
         </p>
       </div>
-      <div class="credit">Made with <a href="https://https://ionicframework.com/">Ionic Framework</a> by <a
+      <div class="credit"><span translate [translateParams]="{ language: language }">about.madewith</span> <a href="https://https://ionicframework.com/">Ionic Framework</a><span translate [translateParams]="{ language: language }">about.by</span>  <a
           href="https://github.com/DavidAntunezPerez">David Antúnez Pérez</a></div>
     </div>
   </div>

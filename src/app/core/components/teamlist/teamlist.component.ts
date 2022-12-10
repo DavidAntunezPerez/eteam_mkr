@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Team } from '../../models';
 
 @Component({
@@ -11,7 +12,7 @@ export class TeamListComponent implements OnInit {
   @Input() tam: Team;
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete
-  constructor() { }
+  constructor( private translateService: TranslateService ) { }
 
   ngOnInit() {}
 
@@ -23,4 +24,8 @@ export class TeamListComponent implements OnInit {
     this.onDelete.emit(this.tam);
   }
 
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 }

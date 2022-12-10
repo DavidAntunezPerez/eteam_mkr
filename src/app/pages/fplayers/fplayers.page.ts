@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-fplayers',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FplayersPage implements OnInit {
 
-  constructor() { }
+  constructor(private translateService: TranslateService) { }
+
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
   ngOnInit() {
   }

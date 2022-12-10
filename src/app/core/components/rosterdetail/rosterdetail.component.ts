@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Roster } from '../../.';
 import { ModalController } from '@ionic/angular';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-rosterdetail',
@@ -25,7 +25,7 @@ export class RosterDetailComponent implements OnInit {
   }
 
   constructor(private formBld: FormBuilder, private modal: ModalController, 
-    // private translateService: TranslateService
+    private translateService: TranslateService
     ) {
       this.form = this.formBld.group({
         id:[null],
@@ -50,9 +50,9 @@ export class RosterDetailComponent implements OnInit {
     this.form.controls['joinDate'].setValue(joinDate);
   }
   
-  // language: string = this.translateService.currentLang;
-  // languageChange() {
-  //   this.translateService.use(this.language);
-  // }
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
 }

@@ -3,10 +3,10 @@
     "languageChangePlaceholder": "Langue...",
     "title": "Accueil",
     "maintext": "Créez votre propre ligue eSports",
-    "createteams":"Créer des équipes",
+    "createteams": "Créer des équipes",
     "or": "OU",
     "createplayers": "Créer des joueurs",
-    "madeby" : "Fabriqué par "
+    "madeby": "Fabriqué par "
   },
   "menu": {
     "title": "Menu",
@@ -18,36 +18,60 @@
     "fteams": "Équipes Fav.",
     "about": "À propos"
   },
-  "players":{
-    "title":"Joueurs",
+  "players": {
+    "title": "Joueurs",
     "name": "Nom",
-    "nameph":"Entrez le nom du joueur",
+    "nameph": "Entrez le nom du joueur",
     "surname": "Nom de famille",
-    "surnameph":"Entrez le nom de famille du joueur",
-    "nickname":"Pseudo",
-    "nicknameph":"Entrez le pseudo du joueur",
-    "age":"Âge",
-    "ageph":"Entrez l'âge du joueur",
-    "kda":"KDA",
-    "kdaph":"Entrez le KDA du joueur",
-    "role":"Rôle",
-    "roleph":"Entrez le rôle du joueur",
-    "picture":"Photo",
-    "pictureph":"Entrez une photo du joueur (Facultatif)"
+    "surnameph": "Entrez le nom de famille du joueur",
+    "nickname": "Pseudo",
+    "nicknameph": "Entrez le pseudo du joueur",
+    "age": "Âge",
+    "ageph": "Entrez l'âge du joueur",
+    "kda": "KDA",
+    "kdaph": "Entrez le KDA du joueur",
+    "role": "Rôle",
+    "roleph": "Entrez le rôle du joueur",
+    "picture": "Photo",
+    "pictureph": "Entrez une photo du joueur (Facultatif)"
   },
   "teams": {
     "title": "Équipes",
     "name": "Nom",
-    "nameph":"Entrez le nom de l'équipe",
+    "nameph": "Entrez le nom de l'équipe",
     "tag": "Tag",
-    "tagph":"ntrez le tag de l'équipe",
+    "tagph": "ntrez le tag de l'équipe",
     "titles": "Titres",
-    "titlesph":"Entrez les titres des équipes (laissez vide si aucun)",
+    "titlesph": "Entrez les titres des équipes (laissez vide si aucun)",
     "coach": "Entraîneur",
-    "coachph":"Entrez le coach de l'équipe",
+    "coachph": "Entrez le coach de l'équipe",
     "wr": "Rayon de Victoire",
-    "wrph":"Entrez le rayon de victoire de l'équipe",
+    "wrph": "Entrez le rayon de victoire de l'équipe",
     "picture": "Photo",
-    "pictureph":"Entrez une image (Facultatif)"
+    "pictureph": "Entrez une image (Facultatif)",
+    "wrlist": "Rayon de Victoire"
+  },
+  "rosters": {
+    "title": "Marché des changes",
+    "detailtitle": "Détails supplémentaires de l'équipe",
+    "selectdate": "Sélectionnez la date et l'heure :",
+    "selectplayer": "Sélectionnez un joueur :",
+    "selectteam": "Sélectionnez une équipe :"
+  },
+  "fplayers": {
+    "title": "Joueurs Favoris"
+  },
+  "fteams": {
+    "title": "Équipes favorites"
+  },
+  "about": {
+    "title": "À propos de",
+    "aboutme": "À propos de moi",
+    "aboutmetitle": "Qui suis-je et que dois-je faire",
+    "p1": "Je suis un étudiant de 19 ans passionné par la programmation qui aspire à être l'un des meilleurs programmeurs du futur. Né à Malaga, à l'âge de 14 ans j'ai commencé à programmer de petites choses. Mes hobbies sont les jeux vidéo , paddle-tennis et aussi voir eSports. J'étudie actuellement le développement d'applications multiplateformes au CPIFP Málaga Tech Park",
+    "p2": "L'idée du projet surgit pour faciliter la gestion d'un de mes secteurs de prédilection, le monde de l'eSport.",
+    "madewith": "Fabriqué avec ",
+    "by": " par ",
+    "role": "2ºDAM étudiant"
   }
 }

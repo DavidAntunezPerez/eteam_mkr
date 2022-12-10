@@ -1,6 +1,7 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Player,PlayerService } from '../../';
 
 export const PLAYER_PROFILE_VALUE_ACCESSOR: any = {
@@ -17,12 +18,19 @@ export const PLAYER_PROFILE_VALUE_ACCESSOR: any = {
 })
 export class PlayerShowListComponent implements OnInit, ControlValueAccessor {
 
+  // TRANSLATE
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
+
   selectedPlayer:Player | undefined;
   propagateChange = (_: any) => { }
   isDisabled:boolean = false;
 
   constructor(
-    private plySvc:PlayerService
+    private plySvc:PlayerService,
+    private translateService: TranslateService
   ) { }
 
 

@@ -4,7 +4,7 @@
       <ng-container *ngIf="value">
         <ion-label>{{(date$ | async) | date:'short'}}</ion-label>
       </ng-container>
-      <ion-label *ngIf="!value">Select a date and time:</ion-label>
+      <ion-label *ngIf="!value" translate [translateParams]="{ language: language }">rosters.selectdate</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-datetime #datetime value="{{(date$ | async)}}" (ionChange)="onDateTimeChanged($event, accordion)">

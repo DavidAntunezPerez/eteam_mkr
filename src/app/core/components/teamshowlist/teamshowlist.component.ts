@@ -1,6 +1,7 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Team, TeamService } from '../../.';
 
 export const TEAM_PROFILE_VALUE_ACCESSOR: any = {
@@ -18,11 +19,17 @@ export const TEAM_PROFILE_VALUE_ACCESSOR: any = {
 
 export class TeamShowListComponent implements OnInit, ControlValueAccessor {
 
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
+
   selectedTeam:Team | undefined;
   propagateChange = (_: any) => { }
   isDisabled:boolean = false;
 
   constructor(
+    private translateService: TranslateService,
     private tamSvc:TeamService
   ) { }
 

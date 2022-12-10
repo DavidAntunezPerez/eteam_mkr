@@ -8,7 +8,7 @@
         </ion-avatar>
         <ion-label>[{{selectedTeam.tag}}] {{selectedTeam.name}} </ion-label>
       </ng-container>
-      <ion-label *ngIf="!selectedTeam">Select a team</ion-label>
+      <ion-label *ngIf="!selectedTeam" translate [translateParams]="{ language: language }">rosters.selectteam</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>

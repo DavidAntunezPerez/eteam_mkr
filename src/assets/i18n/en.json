@@ -38,16 +38,40 @@
   "teams": {
     "title": "Teams",
     "name": "Name",
-    "nameph":"Introduce the team's name",
+    "nameph": "Introduce the team's name",
     "tag": "Tag",
-    "tagph":"Introduce the team's tag",
+    "tagph": "Introduce the team's tag",
     "titles": "Titles",
-    "titlesph":"Introduce the team's titles (leave blank if none)",
+    "titlesph": "Introduce the team's titles (leave blank if none)",
     "coach": "Coach",
-    "coachph":"Introduce the team's coach",
+    "coachph": "Introduce the team's coach",
     "wr": "WinRatio",
-    "wrph":"Introduce the team's win ratio",
+    "wrph": "Introduce the team's win ratio",
     "picture": "Picture",
-    "pictureph":"Introduce the picture URL (Optional)"
+    "pictureph": "Introduce the picture URL (Optional)",
+    "wrlist": "WinRatio"
+  },
+  "rosters": {
+    "title": "Roster Changes",
+    "detailtitle": "Roster Signment Details",
+    "selectdate": "Select a date and time:",
+    "selectplayer": "Select a player:",
+    "selectteam": "Select a team:"
+  },
+  "fplayers": {
+    "title": "Favourite Players"
+  },
+  "fteams": {
+    "title": "Favourite Teams"
+  },
+  "about": {
+    "title": "About",
+    "aboutme": "About me",
+    "aboutmetitle": "Here's who I am & what I do",
+    "p1": "I am a 19 year's old programming passionate student that aims to be one of the best programmers in the future. Born in Málaga, at 14 started programming small little programs. My hobbies are playing videogames, paddle and also watching eSports. I am currently studying Cross-Platform App Development in CPIFP Malaga Tech Park",
+    "p2": "The project idea comes from ease the management of one of my favorite sectors, eSport world.",
+    "madewith": "Made with ",
+    "by": " by ",
+    "role": "2º DAM Student"
   }
 }

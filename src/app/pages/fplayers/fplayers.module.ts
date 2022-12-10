@@ -9,11 +9,21 @@ import { FplayersPageRoutingModule } from './fplayers-routing.module';
 import { FplayersPage } from './fplayers.page';
 
 import { CoreModule } from '../../core/core.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from 'src/app/utils/translate';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CoreModule,
-    FplayersPageRoutingModule
+    FplayersPageRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [FplayersPage]
 })

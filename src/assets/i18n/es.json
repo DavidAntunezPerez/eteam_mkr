@@ -48,6 +48,30 @@
     "wr": "Radio de Victorias",
     "wrph":"Introduce el radio de victorias del equipo",
     "picture": "Foto",
-    "pictureph":"Introduce una foto (Opcional)"
+    "pictureph":"Introduce una foto (Opcional)",
+    "wrlist":"Ratio de Victorias"
+  },
+  "rosters":{
+    "title":"Mercado de Cambios",
+    "detailtitle":"Detalles de adición al equipo",
+    "selectdate":"Seleccionar fecha y hora:",
+    "selectplayer":"Selecciona un jugador:",
+    "selectteam":"Selecciona un equipo:"
+  },
+  "fplayers":{
+    "title":"Jugadores Favoritos"
+  },
+  "fteams":{
+    "title":"Equipos Favoritos"
+  },
+  "about":{
+    "title":"Acerca de",
+    "aboutme": "Sobre mi",
+    "aboutmetitle": "Quién soy y qué hago",
+    "p1": "Soy un estudiante apasionado por la programación de 19 años que aspira a ser uno de los mejores programadores del futuro. Nacido en Málaga, a los 14 años empecé a programar pequeñas cosas. Mis hobbies son los videojuegos, el pádel y también ver eSports. Actualmente estoy estudiando Desarrollo de Apps Multiplataforma en CPIFP Málaga Tech Park",
+    "p2": "La idea del proyecto surge para facilitar la gestión de uno de mis sectores favoritos, el mundo de los eSports.",
+    "madewith": "Hecho con ",
+    "by": " por ",
+    "role": "Estudiante de 2º DAM"
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { RosterDetailComponent,RosterService, Roster } from '../../core';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-rosters',
@@ -14,16 +14,16 @@ export class RostersPage implements OnInit {
   
   
   constructor(
-    // private translateService: TranslateService,
+    private translateService: TranslateService,
     private rosterSvc: RosterService,
     private modal: ModalController,
     private alert: AlertController
   ) {}
 
-  // language: string = this.translateService.currentLang;
-  // languageChange() {
-  //   this.translateService.use(this.language);
-  // }
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 
   ngOnInit() {}
 
