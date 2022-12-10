@@ -73,5 +73,16 @@
     "madewith": "Hecho con ",
     "by": " por ",
     "role": "Estudiante de 2º DAM"
+  },
+  "alerts":{
+    "deleteplayer":"¿Quieres borrar a este jugador?",
+    "deleteteam":"¿Quieres borrar a este equipo?",
+    "fireplayer":"¿Quieres expulsar a este jugador?",
+    "error":"Error",
+    "close":"Cerrar",
+    "cannotdelete":"No se puede borrar el jugador porque está unido a un equipo.",
+    "cannotdeleteteam":"No se puede borrar el equipo porque tiene jugadores unidos.",
+    "cancel":"Cancelar",
+    "delete":"Borrar"
   }
 }

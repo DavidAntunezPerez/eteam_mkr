@@ -7,8 +7,6 @@ import {
 } from '../../core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-// import { TranslateService } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-players',
   templateUrl: './players.page.html',
@@ -69,11 +67,11 @@ export class PlayersPage implements OnInit {
 
   async onDeleteAlert(player: Player) {
     const alert = await this.alert.create({
-      header: 'Do you want to delete this player?',
+      header: this.translateService.instant('alerts.deleteplayer'),
       cssClass: 'alertDelete',
       buttons: [
         {
-          text: 'Cancel',
+          text: this.translateService.instant('alerts.cancel'),
           role: 'cancel',
           cssClass: 'alertCancel',
           handler: () => {
@@ -81,7 +79,7 @@ export class PlayersPage implements OnInit {
           },
         },
         {
-          text: 'Delete',
+          text: this.translateService.instant('alerts.delete'),
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
@@ -100,12 +98,12 @@ export class PlayersPage implements OnInit {
 
   async onPlayerExistsAlert(player: any) {
     const alert = await this.alert.create({
-      header: 'Error',
-      message: 'Cannot delete this player because its signed in a team.',
+      header: this.translateService.instant('alerts.error'),
+      message: this.translateService.instant('alerts.cannotdelete'),
       cssClass: 'alertDelete',
       buttons: [
         {
-          text: 'Close',
+          text: this.translateService.instant('alerts.close'),
           cssClass: 'alertConfirm',
           role: 'close',
           handler: () => {},

@@ -60,11 +60,11 @@ export class RostersPage implements OnInit {
 
   async onDeleteAlert(roster:any) {
     const alert = await this.alert.create({
-      header: 'Do you want to fire this player?',
+      header: this.translateService.instant('alerts.fireplayer'),
       cssClass: 'alertDelete',
       buttons: [
         {
-          text: 'Cancel',
+          text: this.translateService.instant('alerts.cancel'),
           role: 'cancel',
           cssClass: 'alertCancel',
           handler: () => {
@@ -72,7 +72,7 @@ export class RostersPage implements OnInit {
           },
         },
         {
-          text: 'Delete',
+          text: this.translateService.instant('alerts.delete'),
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {

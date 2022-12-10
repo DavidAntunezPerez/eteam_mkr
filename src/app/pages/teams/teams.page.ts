@@ -64,11 +64,11 @@ export class TeamsPage implements OnInit {
 
   async onDeleteAlert(team: Team) {
     const alert = await this.alert.create({
-      header: 'Do you want to delete this team?',
+      header: this.translateService.instant('alerts.deleteteam'),
       cssClass: 'alertDelete',
       buttons: [
         {
-          text: 'Cancel',
+          text: this.translateService.instant('alerts.cancel'),
           role: 'cancel',
           cssClass: 'alertCancel',
           handler: () => {
@@ -76,7 +76,7 @@ export class TeamsPage implements OnInit {
           },
         },
         {
-          text: 'Delete',
+          text: this.translateService.instant('alerts.delete'),
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
@@ -95,13 +95,13 @@ export class TeamsPage implements OnInit {
 
   async onTeamExistsAlert(team: any) {
     const alert = await this.alert.create({
-      header: 'Error',
-      message: 'Cannot delete this team because it has signed players.',
+      header: this.translateService.instant('alerts.error'),
+      message: this.translateService.instant('alerts.cannotdeleteteam'),
       cssClass: 'alertDelete',
       buttons: [
         {
           cssClass: 'alertConfirm',
-          text: 'Close',
+          text: this.translateService.instant('alerts.close'),
           role: 'close',
           handler: () => {},
         },
