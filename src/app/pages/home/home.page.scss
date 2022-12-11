@@ -111,11 +111,17 @@ h6 span {
   transition: all 250ms linear;
   margin: 20px;
 }
-.logo img{
+.logo{
   width: 80vh;
   margin: auto;
-  border-radius: 30px;
+  border-radius: 50px;
   display: block;
+}
+ion-img::part(image) {
+  border-radius: 30px;
+  width: 80vh;
+  display: block;
+  margin: auto;
 }
 /*  */
 /* FOOTER STYLE */
@@ -124,3 +130,13 @@ footer {
   border-top: 1px solid #c4c3ca;
 }
 /*  */
+
+// MAKE ION-IMG RESPONSIVE 
+@media only screen and (max-width: 500px) {
+  // AT 500 PX SIZE SCREEN IMAGE STARTS TO BE CROPPED BY THE END OF THE SCREEN, SO WE MAKE IT SMALLER.
+  ion-img::part(image) {
+    width: 70vh;
+    display: block;
+    margin: auto;
+  }
+}
