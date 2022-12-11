@@ -99,6 +99,7 @@ export class LogEntry {
     return ret;
   }
 
+  // FORMAT PARAMS: create a comma-delimited list of the parameter array
   private formatParams(params: any[]): string {
     let ret: string = params.join(',');
 
