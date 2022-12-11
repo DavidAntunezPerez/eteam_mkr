@@ -8,20 +8,20 @@ export class LogService {
   logWithDate: boolean = true;
 
   //  FORMAT PARAMS: create a comma-delimited list of the parameter array
-  private formatParams(params: any[]): string {
-    let ret: string = params.join(',');
+  // private formatParams(params: any[]): string {
+  //   let ret: string = params.join(',');
 
-    // Is there at least one object in the array?
-    if (params.some((p) => typeof p == 'object')) {
-      ret = '';
+  //   // Is there at least one object in the array?
+  //   if (params.some((p) => typeof p == 'object')) {
+  //     ret = '';
 
-      // Build comma-delimited string
-      for (let item of params) {
-        ret += JSON.stringify(item) + ',';
-      }
-    }
-    return ret;
-  }
+  //     // Build comma-delimited string
+  //     for (let item of params) {
+  //       ret += JSON.stringify(item) + ',';
+  //     }
+  //   }
+  //   return ret;
+  // }
 
   // SHOULD LOG METHOD
   private shouldLog(level: LogLevel): boolean {
@@ -38,28 +38,19 @@ export class LogService {
   // WRITE TO LOG METHOD
   private writeToLog(msg: string, level: LogLevel, params: any[]) {
     if (this.shouldLog(level)) {
-      let value: string = '';
-
-      // Build log string
-      if (this.logWithDate) {
-        value = new Date() + ' - ';
-      }
-
-      value += 'Type: ' + LogLevel[this.level];
-      value += ' - Message: ' + msg;
-      if (params.length) {
-        value += ' - Extra Info: ' + this.formatParams(params);
-      }
-
-      // Log the value
-      console.log(value);
+      let entry: LogEntry = new LogEntry();
+      entry.message = msg;
+      entry.level = level;
+      entry.extraInfo = params;
+      entry.logWithDate = this.logWithDate;
+      console.log(entry.buildLogString());
     }
   }
 
-  // MSG TYPES (CREATE LOG ENTRY CLASS---)
+  // MSG TYPES
 
   debug(msg: string, ...optionalParams: any[]) {
-    let values = ["1", "Home", "MainPage"];
+    let values = ['1', 'Home', 'MainPage','Debug Values'];
     this.writeToLog(msg, LogLevel.Debug, values);
   }
 
@@ -81,5 +72,46 @@ export class LogService {
 
   log(msg: string, ...optionalParams: any[]) {
     this.writeToLog(msg, LogLevel.All, optionalParams);
+  }
+}
+// (CREATE LOG ENTRY CLASS---)
+export class LogEntry {
+  // Public Properties
+  entryDate: Date = new Date();
+  message: string = '';
+  level: LogLevel = LogLevel.Debug;
+  extraInfo: any[] = [];
+  logWithDate: boolean = true;
+
+  buildLogString(): string {
+    let ret: string = '';
+
+    if (this.logWithDate) {
+      ret = new Date() + ' - ';
+    }
+
+    ret += 'Type: ' + LogLevel[this.level];
+    ret += ' - Message: ' + this.message;
+    if (this.extraInfo.length) {
+      ret += ' - Extra Info: ' + this.formatParams(this.extraInfo);
+    }
+
+    return ret;
+  }
+
+  private formatParams(params: any[]): string {
+    let ret: string = params.join(',');
+
+    // Is there at least one object in the array?
+    if (params.some((p) => typeof p == 'object')) {
+      ret = '';
+
+      // Build comma-delimited string
+      for (let item of params) {
+        ret += JSON.stringify(item) + ',';
+      }
+    }
+
+    return ret;
   }
 }
