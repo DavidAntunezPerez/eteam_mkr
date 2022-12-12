@@ -9,5 +9,5 @@
 
 <ion-content>
 <!-- PLAYER LIST CONTENT -->
-<app-playerfavlist *ngFor="let ply of getPlayer()" [plyfav]="ply" (onDelete)="onUnfavPlayer($event)"></app-playerfavlist>
+<app-playerfavlist *ngFor="let ply of getPlayer()" [plyfav]="ply" (onUnfav)="onUnfavPlayer($event)"></app-playerfavlist>
 </ion-content>

@@ -8,13 +8,13 @@ import { Player } from '../../models';
 })
 export class PlayerfavlistComponent implements OnInit {
   @Input() plyfav: Player;
-  @Output() onDelete = new EventEmitter(); // event delete fav
+  @Output() onUnfav = new EventEmitter(); // event unfav
   constructor() { }
 
   ngOnInit() {}
 
-  onDeleteClick() {
-    this.onDelete.emit(this.plyfav);
+  onUnfavClick() {
+    this.onUnfav.emit(this.plyfav);
   }
 
 }

@@ -143,4 +143,8 @@ export class PlayerService {
   deleteFavPlayer(play: Player){
     play.isfav = false
   }
+
+  addFavPlayer(play:Player){
+    play.isfav = true
+  }
 }

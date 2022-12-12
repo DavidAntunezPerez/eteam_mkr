@@ -122,4 +122,40 @@ export class PlayersPage implements OnInit {
       this.onDeleteAlert(player);
     else this.onPlayerExistsAlert(player);
   }
+
+  // ON FAV ALERT
+  async onFavAlert(player: Player) {
+    const alert = await this.alert.create({
+      header: this.translateService.instant('alerts.favplayer'),
+      cssClass: 'alertDelete',
+      buttons: [
+        {
+          text: this.translateService.instant('alerts.cancel'),
+          role: 'cancel',
+          cssClass: 'alertCancel',
+          handler: () => {
+            console.log('Operation cancelled');
+          },
+        },
+        {
+          text: this.translateService.instant('alerts.unfav'),
+          role: 'confirm',
+          cssClass: 'alertConfirm',
+          handler: () => {
+            if (player.id) {
+              this.playerinfo.addFavPlayer(player);
+            }
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+  }
+  onFavPlayer(player: Player) {
+    // fav player function;
+      this.onFavAlert(player);
+  }
 }

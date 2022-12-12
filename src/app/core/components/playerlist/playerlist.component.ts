@@ -10,6 +10,7 @@ export class PlayerListComponent implements OnInit {
   @Input() ply: Player;
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete
+  @Output() onFav = new EventEmitter(); // event fav
   constructor() { }
 
   ngOnInit() {}
@@ -20,6 +21,9 @@ export class PlayerListComponent implements OnInit {
 
   onDeleteClick() {
     this.onDelete.emit(this.ply);
+  }
+  onFavClick() {
+    this.onFav.emit(this.ply);
   }
 
 }
