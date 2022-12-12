@@ -27,10 +27,10 @@ export class FplayersPage implements OnInit {
     return this.playerinfo.getPlayerSpecificFav();
   }
 
-  // ON DELETE ALERT
-  async onDeleteAlert(player: Player) {
+  // ON UNFAV ALERT
+  async onUnfavAlert(player: Player) {
     const alert = await this.alert.create({
-      header: this.translateService.instant('alerts.deleteplayer'),
+      header: this.translateService.instant('alerts.unfavplayer'),
       cssClass: 'alertDelete',
       buttons: [
         {
@@ -42,12 +42,12 @@ export class FplayersPage implements OnInit {
           },
         },
         {
-          text: this.translateService.instant('alerts.delete'),
+          text: this.translateService.instant('alerts.unfav'),
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
             if (player.id) {
-              this.playerinfo.deletePlayerById(player.id);
+              this.playerinfo.deleteFavPlayer(player);
             }
           },
         },
@@ -58,8 +58,8 @@ export class FplayersPage implements OnInit {
 
     const { role } = await alert.onDidDismiss();
   }
-  onDeletePlayer(player: Player) {
-    // delete player function;
-      this.onDeleteAlert(player);
+  onUnfavPlayer(player: Player) {
+    // unfav player function;
+      this.onUnfavAlert(player);
   }
 }

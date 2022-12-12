@@ -138,4 +138,9 @@ export class PlayerService {
       this.playerSubject.next(this.player);
     }
   }
+
+  // REMOVE PLAYER FROM FAVOURITE PAGE
+  deleteFavPlayer(play: Player){
+    play.isfav = false
+  }
 }
