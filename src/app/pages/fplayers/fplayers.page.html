@@ -8,5 +8,6 @@
 </ion-header>
 
 <ion-content>
-
+<!-- PLAYER LIST CONTENT -->
+<app-playerfavlist *ngFor="let ply of getPlayer()" [plyfav]="ply" (onDelete)="onDeletePlayer($event)"></app-playerfavlist>
 </ion-content>

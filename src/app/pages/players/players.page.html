@@ -9,8 +9,8 @@
 
 <ion-content>
   <!-- PLAYER LIST CONTENT -->
-  <app-playerlist *ngFor="let ply of getPlayer()" [ply]="ply" (onDelete)="onDeletePlayer($event)"
-    (onEdit)="onEditPlayer($event)"></app-playerlist>
+    <app-playerlist *ngFor="let ply of getPlayer()" [ply]="ply" (onDelete)="onDeletePlayer($event)"
+      (onEdit)="onEditPlayer($event)"></app-playerlist>
 </ion-content>
 
 <!-- BUTTON RIGHT BOTTOM TO ADD -->

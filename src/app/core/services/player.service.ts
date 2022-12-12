@@ -17,6 +17,7 @@ export class PlayerService {
       role: 'Rifler',
       picture:
         'https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3',
+      isfav: true,
     },
     {
       id: 2,
@@ -28,6 +29,7 @@ export class PlayerService {
       role: 'Awper',
       picture:
         'https://img-cdn.hltv.org/playerbodyshot/Ff2gUR7tQRW-6_nkTfxZdu.png?ixlib=java-2.1.0&w=400&s=f090fb981261e3c5516606d3b0139b41',
+      isfav: false,
     },
     {
       id: 3,
@@ -37,6 +39,7 @@ export class PlayerService {
       age: 34,
       kda: 0.77,
       role: 'IGL & Support',
+      isfav: false,
     },
     {
       id: 4,
@@ -48,6 +51,7 @@ export class PlayerService {
       role: 'Awper & IGL',
       picture:
         'https://img-cdn.hltv.org/playerbodyshot/TFAU5GadOux7ZMV8XCTQwY.png?ixlib=java-2.1.0&w=400&s=8ff7347bb305f218b9cfed4999e2b6f0',
+      isfav: true,
     },
     {
       id: 5,
@@ -57,6 +61,7 @@ export class PlayerService {
       age: 25,
       kda: 1.13,
       role: 'Flasher',
+      isfav: false,
     },
   ];
   private playerSubject: BehaviorSubject<Player[]> = new BehaviorSubject(
@@ -77,6 +82,32 @@ export class PlayerService {
   public getPlayerById(id: number) {
     // returns player by ID
     return this.player.find((ply) => ply.id == id);
+  }
+
+  public getPlayerByFav(fav: boolean){
+    // returns player assigned as favourite
+    return this.player.find((ply) => ply.isfav = true);
+  }
+
+  public getPlayerSpecificFav(): Player[]{
+    // filter player by favourite
+    let x = this.player.filter((ply) => {
+      return ply.isfav == true;
+    });
+    return x;
+  }
+
+  public getPlayerByAge(age: number) {
+    // returns player by age
+    return this.player.find((ply) => ply.age == age);
+  }
+
+  public getPlayerSpecificAge(): Player[]{
+    // filter player by age
+    let x = this.player.filter((ply) => {
+      return ply.age == 25;
+    });
+    return x;
   }
 
   deletePlayerById(id: number) {
