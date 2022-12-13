@@ -3,7 +3,7 @@
     <img *ngIf="!ply.picture" alt="Default player picture" src="../../../../assets/icon/default-player.png" />
     <img *ngIf="ply.picture" alt="Custom player picture" [src]="ply.picture" />
   </ion-avatar>
-  <ion-label>{{ply.name}} '{{ply.nick}}' {{ply.surname}} <br><ion-text
+  <ion-label>{{ply.name}} '<span id="cprimary">{{ply.nick}}</span>' {{ply.surname}} <br><ion-text
       color="medium">{{ply.role}}</ion-text></ion-label>
 
   <!-- PLAYER IS FAV -->

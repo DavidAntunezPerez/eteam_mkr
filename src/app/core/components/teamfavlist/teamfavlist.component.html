@@ -3,6 +3,6 @@
     <img *ngIf="!tamfav.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png"/>
     <img *ngIf="tamfav.picture" alt="Custom team picture" [src]="tamfav.picture" />
   </ion-avatar>
-  <ion-label>[{{tamfav.tag}}] {{tamfav.name}} <br><ion-text color="medium">{{tamfav.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
+  <ion-label>[<span id="cprimary">{{tamfav.tag}}</span>] {{tamfav.name}} <br><ion-text color="medium">{{tamfav.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
   <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5" name="star" ></ion-icon></ion-button>
 </ion-item>

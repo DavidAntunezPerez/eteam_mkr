@@ -3,6 +3,6 @@
     <img *ngIf="!plyfav.picture" alt="Default player picture" src="../../../../assets/icon/default-player.png"/>
     <img *ngIf="plyfav.picture" alt="Custom player picture" [src]="plyfav.picture" />
   </ion-avatar>
-  <ion-label>{{plyfav.name}} '{{plyfav.nick}}' {{plyfav.surname}} <br><ion-text color="medium">{{plyfav.role}}</ion-text></ion-label>
+  <ion-label>{{plyfav.name}} '<span id="cprimary">{{plyfav.nick}}</span>' {{plyfav.surname}} <br><ion-text color="medium">{{plyfav.role}}</ion-text></ion-label>
   <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5" name="heart" ></ion-icon></ion-button>
 </ion-item>

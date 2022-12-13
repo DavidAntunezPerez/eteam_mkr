@@ -3,7 +3,7 @@
     <img *ngIf="!tam.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png"/>
     <img *ngIf="tam.picture" alt="Custom team picture" [src]="tam.picture" />
   </ion-avatar>
-  <ion-label>[{{tam.tag}}] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
+  <ion-label>[<span id="cprimary">{{tam.tag}}</span>] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
   <ion-button *ngIf="!tam.isfav" icon-only fill="clear" (click)="onFavClick()"><ion-icon style="zoom:1.5" name="star-outline" color="tertiary" ></ion-icon></ion-button>
   <ion-button *ngIf="tam.isfav" icon-only fill="clear" (click)="onAlreadyFavClick()"><ion-icon style="zoom:1.5" name="star" color="tertiary" ></ion-icon></ion-button>
   <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="ellipsis-horizontal-circle-outline" ></ion-icon></ion-button>
