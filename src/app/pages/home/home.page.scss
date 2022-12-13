@@ -109,19 +109,17 @@ h6 span {
   display: block;
   z-index: 100;
   transition: all 250ms linear;
-  margin: 20px;
-}
-.logo{
   width: 80vh;
   margin: auto;
   border-radius: 50px;
   display: block;
 }
+
 ion-img::part(image) {
   border-radius: 30px;
   width: 80vh;
   display: block;
-  margin: auto;
+  border-bottom:2px solid #ffeba7 ;
 }
 /*  */
 /* FOOTER STYLE */
@@ -132,11 +130,19 @@ footer {
 /*  */
 
 // MAKE ION-IMG RESPONSIVE 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (min-width: 380px) {
   // AT 500 PX SIZE SCREEN IMAGE STARTS TO BE CROPPED BY THE END OF THE SCREEN, SO WE MAKE IT SMALLER.
   ion-img::part(image) {
     width: 70vh;
     display: block;
-    margin: auto;
+    margin: 20px,20px,auto,auto;
+  }
+}
+@media only screen and (max-width: 380px) {
+  // AT 500 PX SIZE SCREEN IMAGE STARTS TO BE CROPPED BY THE END OF THE SCREEN, SO WE MAKE IT SMALLER.
+  ion-img::part(image) {
+    width: 50vh;
+    display: block;
+    margin: 0,15px;
   }
 }
