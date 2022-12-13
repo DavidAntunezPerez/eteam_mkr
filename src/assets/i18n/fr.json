@@ -88,6 +88,8 @@
     "cannotdelete":"Impossible de supprimer le joueur car il fait partie d'une équipe.",
     "cannotdeleteteam":"Impossible de supprimer l'équipe car elle a des joueurs attachés.",
     "cancel":"Annuler",
-    "delete":"Supprimer"
+    "delete":"Supprimer",
+    "alreadyfavplayer":"Le joueur est déjà dans votre liste de favoris",
+    "alreadyfavteam":"L'équipe est déjà dans votre liste de favoris"
   }
 }

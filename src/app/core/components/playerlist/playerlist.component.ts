@@ -11,6 +11,7 @@ export class PlayerListComponent implements OnInit {
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete
   @Output() onFav = new EventEmitter(); // event fav
+  @Output() onAlreadyFav = new EventEmitter(); // event already fav
   constructor() { }
 
   ngOnInit() {}
@@ -24,6 +25,9 @@ export class PlayerListComponent implements OnInit {
   }
   onFavClick() {
     this.onFav.emit(this.ply);
+  }
+  onAlreadyFavClick() {
+    this.onAlreadyFav.emit(this.ply);
   }
 
 }

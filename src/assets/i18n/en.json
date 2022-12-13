@@ -88,7 +88,9 @@
     "cannotdelete":"Cannot delete this player because its signed in a team.",
     "cannotdeleteteam":"Cannot delete this team because it has signed players.",
     "cancel":"Cancel",
-    "delete":"Delete"
+    "delete":"Delete",
+    "alreadyfavplayer":"Player is already in your favourite list",
+    "alreadyfavteam":"Team is already in your favourite list"
   }
   
 }

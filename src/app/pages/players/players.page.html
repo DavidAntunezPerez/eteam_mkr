@@ -10,7 +10,7 @@
 <ion-content>
   <!-- PLAYER LIST CONTENT -->
     <app-playerlist *ngFor="let ply of getPlayer()" [ply]="ply" (onDelete)="onDeletePlayer($event)"
-      (onEdit)="onEditPlayer($event)" (onFav)="onFavPlayer($event)"></app-playerlist>
+      (onEdit)="onEditPlayer($event)" (onAlreadyFav)="onAlreadyFavPlayer($event)" (onFav)="onFavPlayer($event)"></app-playerlist>
 </ion-content>
 
 <!-- BUTTON RIGHT BOTTOM TO ADD -->

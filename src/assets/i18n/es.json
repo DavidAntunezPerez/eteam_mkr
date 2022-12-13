@@ -88,6 +88,8 @@
     "cannotdelete":"No se puede borrar el jugador porque está unido a un equipo.",
     "cannotdeleteteam":"No se puede borrar el equipo porque tiene jugadores unidos.",
     "cancel":"Cancelar",
-    "delete":"Borrar"
+    "delete":"Borrar",
+    "alreadyfavplayer":"El jugador ya está en tu lista de favoritos",
+    "alreadyfavteam":"El equipo ya está en tu lista de favoritos"
   }
 }

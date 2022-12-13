@@ -12,6 +12,7 @@ export class TeamListComponent implements OnInit {
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete
   @Output() onFav = new EventEmitter(); // event fav
+  @Output() onAlreadyFav = new EventEmitter(); // event already fav
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {}
@@ -26,6 +27,10 @@ export class TeamListComponent implements OnInit {
 
   onFavClick() {
     this.onFav.emit(this.tam);
+  }
+
+  onAlreadyFavClick(){
+    this.onAlreadyFav.emit(this.tam);
   }
 
   language: string = this.translateService.currentLang;

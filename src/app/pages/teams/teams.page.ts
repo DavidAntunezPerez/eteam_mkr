@@ -154,4 +154,25 @@ export class TeamsPage implements OnInit {
     // fav team function;
       this.onFavAlert(team);
   }
+
+  // ON ALREADY FAV ALERT
+  async onAlreadyFavTeam(team: any) {
+    const alert = await this.alert.create({
+      header: this.translateService.instant('alerts.error'),
+      message: this.translateService.instant('alerts.alreadyfavteam'),
+      cssClass: 'alertDelete',
+      buttons: [
+        {
+          text: this.translateService.instant('alerts.close'),
+          cssClass: 'alertConfirm',
+          role: 'close',
+          handler: () => {},
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+  }
 }
