@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { Player, PlayerService, PlayerDetailComponent } from '../../core';
+import { Player, PlayerService } from '../../core';
 
 @Component({
   selector: 'app-fplayers',

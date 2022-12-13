@@ -8,5 +8,6 @@
 </ion-header>
 
 <ion-content>
-
+<!-- TEAM FAV LIST CONTENT -->
+<app-teamfavlist *ngFor="let tam of getTeam()" [tamfav]="tam" (onUnfav)="onUnfavTeam($event)"></app-teamfavlist>
 </ion-content>

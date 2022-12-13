@@ -8,11 +8,11 @@ import { Team } from '../../models';
   styleUrls: ['./teamlist.component.scss'],
 })
 export class TeamListComponent implements OnInit {
-
   @Input() tam: Team;
   @Output() onEdit = new EventEmitter(); // event edit
   @Output() onDelete = new EventEmitter(); // event delete
-  constructor( private translateService: TranslateService ) { }
+  @Output() onFav = new EventEmitter(); // event fav
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit() {}
 
@@ -22,6 +22,10 @@ export class TeamListComponent implements OnInit {
 
   onDeleteClick() {
     this.onDelete.emit(this.tam);
+  }
+
+  onFavClick() {
+    this.onFav.emit(this.tam);
   }
 
   language: string = this.translateService.currentLang;

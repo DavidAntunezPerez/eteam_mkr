@@ -15,6 +15,7 @@ export class TeamService{
       coach: 'Jamie "keita" Hal',
       wr: '77.3%',
       picture: 'https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e',
+      isfav: false,
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ export class TeamService{
       tag: 'MRDS',
       coach: 'Galder "bladE" Barcena',
       wr: '56.7%',
+      isfav:false,
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ export class TeamService{
       titles: 'x1 Crossfire Cup, x5 Mid Season International',
       coach: 'Sweden Daniel "djL" Narancic',
       wr: '43.2%',
-      picture: 'https://upload.wikimedia.org/wikipedia/fr/thumb/7/7e/NIP-Symbol-RGB-Neon_Yellow.svg/1200px-NIP-Symbol-RGB-Neon_Yellow.svg.png'
+      picture: 'https://upload.wikimedia.org/wikipedia/fr/thumb/7/7e/NIP-Symbol-RGB-Neon_Yellow.svg/1200px-NIP-Symbol-RGB-Neon_Yellow.svg.png',
+      isfav:true,
     },
   ];
   private teamSubject:BehaviorSubject<Team[]> = new BehaviorSubject(this.team);
@@ -77,5 +80,28 @@ export class TeamService{
       tam.wr = t.wr;
     }
     this.teamSubject.next(this.team);
+  }
+
+  public getTeamByFav(fav: boolean){
+    // returns team assigned as favourite
+    return this.team.find((tam) => tam.isfav = true);
+  }
+
+  public getTeamSpecificFav(): Team[]{
+    // filter team by favourite
+    let x = this.team.filter((tam) => {
+      return tam.isfav == true;
+    });
+    return x;
+  }
+
+  // REMOVE TEAM FROM FAVOURITE PAGE
+  deleteFavTeam(tam: Team){
+    tam.isfav = false
+  }
+
+  // ADD PLAYER TO FAVOURITES PAGE
+  addFavTeam(tam:Team){
+    tam.isfav = true
   }
 }
