@@ -18,9 +18,18 @@ ion-item, ion-list{
   display: block;
 }
 
-// IN CASE OF PHONE VIEW, DATE WILL NOT BE SHOWN BECAUSE OF THE LACK OF SPACE
+// IN CASE OF PHONE VIEW, DATE WILL NOT BE SHOWN BECAUSE OF THE LACK OF SPACE, THERE WILL BE SHOWN A EMPTY SPACE (SPACING-DIV)
 @media only screen and (max-width: 600px) {
   #date{
-    display: none;
+    display:none;
+  }
+  #spacing-div{
+    margin-left: 25%;
+  }
+}
+// MEDIUM-TABLET-SIZE
+@media only screen and (min-width:440px) and (max-width:800px) {
+  #spacing-div{
+    margin-left: 45%;
   }
 }
