@@ -6,10 +6,14 @@
   <ion-label>{{ply.name}} '{{ply.nick}}' {{ply.surname}} <br><ion-text
       color="medium">{{ply.role}}</ion-text></ion-label>
 
-  <ion-button *ngIf="ply.isfav" icon-only fill="clear" (click)="onAlreadyFavClick()"><ion-icon style="zoom:1.5" name="heart"
-      color="tertiary"></ion-icon></ion-button>
+  <!-- PLAYER IS FAV -->
+  <ion-button *ngIf="ply.isfav" icon-only fill="clear" (click)="onAlreadyFavClick()"><ion-icon style="zoom:1.5"
+      name="heart" color="tertiary"></ion-icon></ion-button>
+
+  <!-- PLAYER IS NOT FAV -->
   <ion-button *ngIf="!ply.isfav" icon-only fill="clear" (click)="onFavClick()"><ion-icon style="zoom:1.5"
       name="heart-outline" color="tertiary"></ion-icon></ion-button>
+
   <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5"
       name="ellipsis-horizontal-circle-outline"></ion-icon></ion-button>
   <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5"

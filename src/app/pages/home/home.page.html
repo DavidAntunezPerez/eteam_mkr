@@ -20,7 +20,7 @@
         <ion-select interface="popover" [(ngModel)]='language' (ionChange)='languageChange()'
           [placeholder]='"home.languageChangePlaceholder" | translate'>
           <ion-select-option value='en'>English</ion-select-option>
-          <ion-select-option value='es'>Español</ion-select-option>
+          <ion-select-option value='es' >Español</ion-select-option>
           <ion-select-option value='fr'>Français</ion-select-option>
         </ion-select>
       </ion-item>
@@ -32,43 +32,43 @@
   <!-- LOG SERVICE -->
   <!-- <log-test></log-test> -->
   <!-- LOGO -->
-  <div class="logo">
+  <div [ngClass]="'logo'">
     <ion-img src="../../../../assets/icon/homelogo.jpg" alt="eTeam Mkr Logo" class="m-auto"></ion-img>
   </div>
-  <div class="section text-center mb-4">
+  <div [ngClass]="'section text-center mb-4'">
     <!-- CATCH-UP TEXT -->
     <h4 translate [translateParams]="{ language: language }">home.maintext</h4>
   </div>
-  <div class="section text-center">
+  <div [ngClass]="'section text-center'">
     <!-- DOUBLE CHOICE BUTTONS -->
     <a translate [translateParams]="{ language: language }" routerDirection="root" [routerLink]="['/teams']" lines="none" detail="false" routerLinkActive="selected"
-      class="btn mb-3">
-      home.createteams<i class="uil uil uil-shield-plus"></i>
+    [ngClass]="'btn mb-3'">
+      home.createteams<i [ngClass]="'uil uil uil-shield-plus'"></i>
     </a>
-    <h4 translate [translateParams]="{ language: language }" class="mb-3">home.or</h4>
+    <h4 translate [translateParams]="{ language: language }" [ngClass]="'mb-3'">home.or</h4>
     <a translate [translateParams]="{ language: language }" routerDirection="root" [routerLink]="['/players']" lines="none" detail="false" routerLinkActive="selected"
-      class="btn">
-      home.createplayers<i class="input-icon uil uil-user-plus"></i>
+    [ngClass]="'btn'">
+      home.createplayers<i [ngClass]="'input-icon uil uil-user-plus'"></i>
     </a>
   </div>
   <!-- FOOTER SECTION -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 mt-5">
+  <div [ngClass]="'container'">
+    <footer [ngClass]="'d-flex flex-wrap justify-content-between align-items-center pt-3 mt-5'">
 
       <!-- LEFT -->
-      <ul class="nav col-md-6 d-flex justify-content-center list-unstyled">
-        <li class="ms-3"><a class="link" href="https://twitter.com/"><i class="bi bi-twitter fs-5"></i></a></li>
-        <li class="ms-3"><a class="link" href="https://www.twitch.tv/"><i class="bi bi-twitch fs-5"></i></a></li>
-        <li class="ms-3"><a class="link" href="https://www.instagram.com/"><i class="bi bi-instagram fs-5"></i></a>
+      <ul [ngClass]="'nav col-md-6 d-flex justify-content-center list-unstyled'">
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="https://twitter.com/"><i [ngClass]="'bi bi-twitter fs-5'"></i></a></li>
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="https://www.twitch.tv/"><i [ngClass]="'bi bi-twitch fs-5'"></i></a></li>
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="https://www.instagram.com/"><i [ngClass]="'bi bi-instagram fs-5'"></i></a>
         </li>
-        <li class="ms-3"><a class="link" href="https://www.tiktok.com/"><i class="bi bi-tiktok fs-5"></i></a></li>
-        <li class="ms-3"><a class="link" href="https://discord.com/"><i class="bi bi-discord fs-5"></i></a></li>
-        <li class="ms-3"><a class="link" href="mailto:antunezdavid2003@gmail.com"><i
-              class="bi bi-envelope fs-5"></i></a></li>
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="https://www.tiktok.com/"><i [ngClass]="'bi bi-tiktok fs-5'"></i></a></li>
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="https://discord.com/"><i [ngClass]="'bi bi-discord fs-5'"></i></a></li>
+        <li [ngClass]="'ms-3'"><a [ngClass]="'link'" href="mailto:antunezdavid2003@gmail.com"><i
+          [ngClass]="'bi bi-envelope fs-5'"></i></a></li>
       </ul>
       <!-- RIGHT -->
-      <div  class="col-md-6 d-flex align-items-center justify-content-center">
-        <span class="text-center"> <span translate [translateParams]="{ language: language }">home.madeby</span> <a href="https://www.github.com/DavidAntunezPerez" class="link">David
+      <div  [ngClass]="'col-md-6 d-flex align-items-center justify-content-center'">
+        <span [ngClass]="'text-center'"> <span translate [translateParams]="{ language: language }">home.madeby</span> <a href="https://www.github.com/DavidAntunezPerez" [ngClass]="'link'">David
             Antúnez Pérez</a> </span>
       </div>
     </footer>
