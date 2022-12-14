@@ -36,4 +36,12 @@ El diseño de la aplicación está realizado para que cualquier persona pueda co
 - Una funcionalidad extra y oculta a ojos del usuario final es la del servicio de Logs, un servicio que nos proporcionará información adicional a la hora de codificar o mantener la aplicación. Está unida a un componente llamado LogComponent, que al ser agregado a cualquier página nos mostrará un botón donde al clickarlo detallará en la consola datos informativos sobre la página.
 
 ## ESTRUCTURA INTERNA
+En esta sección explicaré la estructura interna del programa, qué directorios y subdirectorios contiene y por qué se ha decidido así.
 
+- Comenzando por el directorio de assets, dentro de este se almacenan tres carpetas:
+  - i18n almacena los archivos JSON de traducción para la aplicación.
+  - icons almacena las imágenes que se adjuntan en cada página, así como el favicon de esta.
+  - screenshots almacena las capturas de pantalla que se adjuntarán en este README.
+  - ![image](./src/assets/screenshots/assets.png)
+
+- Continuamos
