@@ -59,6 +59,10 @@ En esta sección explicaré la estructura interna del programa, qué directorios
 
 En esta sección se detallarán página por página las funciones y el proposito de estas.
 
+### MENÚ
+Menú intuitivo que nos permitirá navegar entre todas las páginas de forma instantánea.
+![image](./src/assets/screenshots/menu.png)
+
 ### PÁGINA DE INICIO
 La página de Inicio es una página muy visual, para atraer al cliente a la aplicación. La información que contiene es muy sutil, lo suficiente como para invitarte a probar la aplicación sin tampoco sobrecalentar al usuario con demasiada información. Esta página cuenta con dos botones, +Jugadores, para dirigirse a la página de creación de jugadores, y +Equipos, para acceder a la creación de equipos. El footer permite al usuario informarse con profundidad de las redes sociales, github y otras webs del creador si es que así lo desea. Además, también permite cambiar de idioma entre Inglés (Predeterminado), Español y Francés.
 ![image](./src/assets/screenshots/homepage.png)
