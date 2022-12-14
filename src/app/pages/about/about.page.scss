@@ -187,3 +187,14 @@ ion-content {
   color: rgba(253, 205, 45, 1);
   font-weight: bold;
 }
+
+@media screen and (max-width: 500px) {
+  #aboutmesection{
+    padding-top: 370px;
+  }
+}
+@media screen and (max-width: 335px) {
+  #aboutmesection{
+    padding-top: 600px;
+  }
+}
