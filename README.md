@@ -20,4 +20,15 @@ El diseño de la aplicación está realizado para que cualquier persona pueda co
 
 ## FUNCIONALIDADES
 
-Como indica la propia descripción del proyecto. Esta aplicación utiliza el sistema CRUD, que se verá presente en cinco de las siete páginas que contiene la aplicación.
+- Comenzando por la página de Inicio o Home Page, esta página tiene la funcionalidad especial de poder cambiar entre tres idiomas distintos toda la aplicación, los idiomas son Inglés, Español y Francés. Además, nos proporciona una presentación para comprender la aplicación y finalmente un footer donde podremos acceder a distintos enlaces web.
+
+- Como indica la propia descripción del proyecto. Esta aplicación utiliza el sistema CRUD, que se verá presente en cinco de las siete páginas que contiene la aplicación. Por lo tanto, tiene las funciones de crear, leer, actualizar y borrar datos (*Create, Read, Update, Delete*). Estas funciones son accesibles mediantes las páginas de Jugadores, Equipos, Mercado, Jugadores Favoritos y Equipos Favoritos. Posteriormente explicaremos cada página de forma exclusiva.
+
+- Una funcionalidad a recalcar, que distingue esta aplicación, es la de favoritos. En las páginas CRUD podremos asignar un equipo o un jugador como favoritos, y, en ese momento aparecerán en las páginas Jugadores Favoritos o Equipos Favoritos, donde sólo tendremos los añadidos anteriormente y podremos eliminar de favoritos una vez allí.
+
+- También tenemos la funcion de hacer un contrato entre un jugador y un equipo en la página de Mercado. Podremos seleccionar jugador, equipo y fecha de contratación y agregarlo a la lista visible en está página donde podremos observar otros movimientos en el mercado. Una vez un jugador esté firmado por un equipo no será posible borrarlo a menos que sea eliminado el contrato. Lo mismo pasa con un equipo que tenga jugadores contratados, hasta que no esté borrado el contrato con todos los jugadores no podrá borrarse.
+
+- Finalmente, tenemos la página Acerca de, donde se detalla información sobre la creación del proyecto y su autor.
+
+- Una funcionalidad extra y oculta a ojos del usuario final es la del servicio de Logs, un servicio que nos proporcionará información adicional a la hora de codificar o mantener la aplicación. Está unida a un componente llamado LogComponent, que al ser agregado a cualquier página nos mostrará un botón donde al clickarlo detallará en la consola datos informativos sobre la página.
+
