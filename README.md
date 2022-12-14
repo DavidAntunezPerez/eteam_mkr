@@ -6,8 +6,9 @@ Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework**
 ## ÍNDICE: 
 1. [¿Qué es?](#qué-es)
 2. [Funcionalidades](#funcionalidades) 
+3. [Estructura Interna](#estructura-interna) 
 
-3. [Video Explicativo](#video-explicativo)
+5. [Video Explicativo](#video-explicativo)
 
 ## ¿QUÉ ES?
 
@@ -33,4 +34,6 @@ El diseño de la aplicación está realizado para que cualquier persona pueda co
 - Finalmente, tenemos la página Acerca de, donde se detalla información sobre la creación del proyecto y su autor.
 
 - Una funcionalidad extra y oculta a ojos del usuario final es la del servicio de Logs, un servicio que nos proporcionará información adicional a la hora de codificar o mantener la aplicación. Está unida a un componente llamado LogComponent, que al ser agregado a cualquier página nos mostrará un botón donde al clickarlo detallará en la consola datos informativos sobre la página.
+
+## ESTRUCTURA INTERNA
 
