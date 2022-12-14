@@ -96,6 +96,7 @@ En esta página se registra la información y movimientos realizados en el merca
 - Jugador contratado
 - Equipo al que se une
 - Fecha del contrato
+
 Una vez se realiza un contrato, el jugador contratado y el equipo que contrata no podrán ser borrados hasta que el contrato no desaparezca.
 Podemos agregar un contrato y editar uno ya creado fácilmente mediante los botones de la página.
 ![image](./src/assets/screenshots/rosterspage.png)
