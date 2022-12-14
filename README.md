@@ -76,3 +76,17 @@ Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para ag
 ![image](./src/assets/screenshots/playerspage.png)
 ![image](./src/assets/screenshots/playeraccordion.png)
 ![image](./src/assets/screenshots/playersedit.png)
+
+### PÁGINA EQUIPOS
+La página de equipos nos mostrará una lista con todos los equipos creados hasta el momento. Un equipo puede estar creado sin tener contrato con ningún jugador. Un equipo dispondrá de la siguiente información: 
+- Nombre del equipo
+- Tag del equipo: Los equipos deben tener un tag que acorte su nombre en las partidas, para poder ponerlo en el resultado. (Similar a como pasa en el marcador de fútbol, donde RMA es el Real Madrid). Este tag suelen ser de entre dos a cinco letras de longitud.
+- Títulos ganados por el equipo: Si no se ha ganado ningún título se puede dejar en blanco y este apartado también quedará en blanco.
+- Entrenador del equipo: Nombre completo del entrenador del equipo. Todos los equipos deben tener mínimo un entrenador.
+- Radio de Victorias: Cálculo del número de partidos ganados entre el número de partidos jugados.
+- Imagen: Imagen del logo del equipo. Es opcional.
+Al igual que pasa con los jugadores, a primera vista se verá el tag y el nombre del equipo, así como su ratio de victorias. Si clickamos en un equipo podremos ver el resto de información.
+Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para agregar al equipo.
+![image](./src/assets/screenshots/teamspage.png)
+![image](./src/assets/screenshots/teamaccordion.png)
+![image](./src/assets/screenshots/teamssedit.png)
