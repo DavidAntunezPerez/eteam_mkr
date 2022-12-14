@@ -62,3 +62,17 @@ En esta sección se detallarán página por página las funciones y el proposito
 ### PÁGINA DE INICIO
 La página de Inicio es una página muy visual, para atraer al cliente a la aplicación. La información que contiene es muy sutil, lo suficiente como para invitarte a probar la aplicación sin tampoco sobrecalentar al usuario con demasiada información. Esta página cuenta con dos botones, +Jugadores, para dirigirse a la página de creación de jugadores, y +Equipos, para acceder a la creación de equipos. El footer permite al usuario informarse con profundidad de las redes sociales, github y otras webs del creador si es que así lo desea. Además, también permite cambiar de idioma entre Inglés (Predeterminado), Español y Francés.
 ![image](./src/assets/screenshots/homepage.png)
+
+### PÁGINA JUGADORES
+La página de jugadores nos mostrará una lista con todos los jugadores creados hasta el momento. Un jugador puede estar creado sin tener contrato con un equipo. Un jugador dispondrá de la siguiente información: 
+- Nombre y Apellido del jugador
+- Apodo en el juego
+- Edad
+- KDA: Ratio de Bajas/Muertes/Asistencias del jugador en todas sus partidas (KillDeathsAssists). Se calcula sumando las bajas a las asistencias y dividiendolas entre el número total de muertes ((K + A) / D).
+- Rol: El rol que toma el jugador en el juego, dependiendo del juego hay distintos roles. Se puede asimilar a las posiciones en el fútbol (delantero, portero, defensa...)
+- Foto: La foto adjunta del jugador, esto es opcional.
+A primera vista la información que se verá será la imagen, el nombre, el apodo, el apellido y el rol, pero al pulsar en el jugador se abrirá un desplegable con el resto de información.
+Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para agregar al jugador.
+![image](./src/assets/screenshots/playerspage.png)
+![image](./src/assets/screenshots/playeraccordion.png)
+![image](./src/assets/screenshots/playersedit.png)
