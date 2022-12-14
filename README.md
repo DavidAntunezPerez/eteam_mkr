@@ -2,7 +2,7 @@
 Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework***, ***Angular*** , ***Typescript***, ***HTML*** y ***SCSS***.
 
 ## ÍNDICE: 
-1. [¿QUÉ ES?](#¿qué-es?)
+1. [¿QUÉ ES?](#qué-es)
 
 5. [Explicación en YouTube](#explicación-en-youtube)
 
