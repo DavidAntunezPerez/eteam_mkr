@@ -2,7 +2,7 @@
 Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework***, ***Angular*** , ***Typescript***, ***HTML*** y ***SCSS***.
 
 ## ÍNDICE: 
-1. [¿QUÉ ES?](#qué-es)
+1. [¿Qué es?](#qué-es)
 
 5. [Explicación en YouTube](#explicación-en-youtube)
 
@@ -15,5 +15,5 @@ Los deportes electrónicos, también llamados ciberdeportes o esports, son compe
 
 Con este proyecto se pretende facilitar una aplicación que nos ayude con esa gestión y adquirir información dentro de una liga de deportes electrónicos, de forma general, podrías crearla para una liga de cualquier videojuego.
 
-El diseño de la aplicación está realizado para que cualquier persona pueda comprenderlo y utilizarlo.
+El diseño de la aplicación está realizado para que cualquier persona pueda comprenderlo y utilizarlo además de ser adaptable para cualquier tipo de dispositivo (Móvil, Tablet, Ordenador Personal...) . Este característico diseño se mantiene vigente en cada una de las páginas, conservando la esencia de la propia aplicación.
 
