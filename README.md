@@ -39,9 +39,13 @@ El diseño de la aplicación está realizado para que cualquier persona pueda co
 En esta sección explicaré la estructura interna del programa, qué directorios y subdirectorios contiene y por qué se ha decidido así.
 
 - Comenzando por el directorio de assets, dentro de este se almacenan tres carpetas:
+  - ![image](./src/assets/screenshots/assets.png)
   - i18n almacena los archivos JSON de traducción para la aplicación.
   - icons almacena las imágenes que se adjuntan en cada página, así como el favicon de esta.
   - screenshots almacena las capturas de pantalla que se adjuntarán en este README.
-  - ![image](./src/assets/screenshots/assets.png)
+  
 
-- Continuamos
+- Continuamos con la carpeta app, que contiene tres carpetas importantes:
+  - ![image](./src/assets/screenshots/app.png)
+  - Utils: Que almacena un archivo translate.ts que nos facilita el sistema de traducción de la aplicación.
+  - Pages: Donde se almacenan las páginas principales de la aplicación. He decidido que esta carpeta no debería de ser una carpeta routing general para enlazar cada página debido a que, a mi parecer, se facilita la manipulación de cada página, sus imports, declaraciones y exports si se mantiene de forma independiente en cada página un archivo de routing.
