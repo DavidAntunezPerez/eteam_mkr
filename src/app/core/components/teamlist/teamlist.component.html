@@ -1,11 +1,30 @@
-<ion-item>
-  <ion-avatar>
-    <img *ngIf="!tam.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png"/>
-    <img *ngIf="tam.picture" alt="Custom team picture" [src]="tam.picture" />
-  </ion-avatar>
-  <ion-label>[<span id="cprimary">{{tam.tag}}</span>] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
-  <ion-button *ngIf="!tam.isfav" icon-only fill="clear" (click)="onFavClick()"><ion-icon style="zoom:1.5" name="star-outline" color="tertiary" ></ion-icon></ion-button>
-  <ion-button *ngIf="tam.isfav" icon-only fill="clear" (click)="onAlreadyFavClick()"><ion-icon style="zoom:1.5" name="star" color="tertiary" ></ion-icon></ion-button>
-  <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="ellipsis-horizontal-circle-outline" ></ion-icon></ion-button>
-  <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-circle-outline" ></ion-icon></ion-button>
-</ion-item>
+<ion-accordion-group>
+  <ion-item>
+    <ion-accordion color="dark">
+      <ion-item slot="header" id="nonborder">
+        <ion-avatar>
+          <img *ngIf="!tam.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png" />
+          <img *ngIf="tam.picture" alt="Custom team picture" [src]="tam.picture" />
+        </ion-avatar>
+        <ion-label>[<span id="cprimary">{{tam.tag}}</span>] {{tam.name}} <br><ion-text color="medium">{{tam.wr}} <span
+              translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" color="dark" style="background-color: #1f2029;">
+        <p> <span id="cprimary" translate [translateParams]="{ language: language }">teams.coach</span>:
+          {{tam.coach}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">teams.titles</span>:
+          {{tam.titles}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">teams.wrlist</span>:
+          {{tam.wr}}</p>
+      </div>
+    </ion-accordion>
+    <ion-button *ngIf="!tam.isfav" icon-only fill="clear" (click)="onFavClick()"><ion-icon style="zoom:1.5"
+        name="star-outline" color="tertiary"></ion-icon></ion-button>
+    <ion-button *ngIf="tam.isfav" icon-only fill="clear" (click)="onAlreadyFavClick()"><ion-icon style="zoom:1.5"
+        name="star" color="tertiary"></ion-icon></ion-button>
+    <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5"
+        name="ellipsis-horizontal-circle-outline"></ion-icon></ion-button>
+    <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5"
+        name="close-circle-outline"></ion-icon></ion-button>
+  </ion-item>
+</ion-accordion-group>

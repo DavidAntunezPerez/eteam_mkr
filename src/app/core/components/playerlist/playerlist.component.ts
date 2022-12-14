@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Player } from '../../models';
 
 @Component({
@@ -12,7 +13,7 @@ export class PlayerListComponent implements OnInit {
   @Output() onDelete = new EventEmitter(); // event delete
   @Output() onFav = new EventEmitter(); // event fav
   @Output() onAlreadyFav = new EventEmitter(); // event already fav
-  constructor() { }
+  constructor(private translateService: TranslateService) { }
 
   ngOnInit() {}
 
@@ -30,4 +31,8 @@ export class PlayerListComponent implements OnInit {
     this.onAlreadyFav.emit(this.ply);
   }
 
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
+  }
 }
