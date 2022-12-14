@@ -3,8 +3,9 @@ Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework**
 
 ## ÍNDICE: 
 1. [¿Qué es?](#qué-es)
+2. [Funcionalidades](#funcionalidades) 
 
-5.  [Video Explicativo](#video-explicativo)
+3. [Video Explicativo](#video-explicativo)
 
 ## ¿QUÉ ES?
 
@@ -17,3 +18,6 @@ Con este proyecto se pretende facilitar una aplicación que nos ayude con esa ge
 
 El diseño de la aplicación está realizado para que cualquier persona pueda comprenderlo y utilizarlo además de ser adaptable para cualquier tipo de dispositivo (Móvil, Tablet, Ordenador Personal...) . Este característico diseño se mantiene vigente en cada una de las páginas, conservando la esencia de la propia aplicación.
 
+## FUNCIONALIDADES
+
+Como indica la propia descripción del proyecto. Esta aplicación utiliza el sistema CRUD, que se verá presente en cinco de las siete páginas que contiene la aplicación.
