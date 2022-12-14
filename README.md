@@ -110,4 +110,4 @@ Esta página guarda sólo los jugadores añadidos a favoritos. Desde aquí podre
 
 ### PÁGINA DE EQUIPOS FAVORITOS
 Esta página guarda sólo los equipos añadidos a favoritos. Desde aquí podremos ver sus datos sin ningún problema. Sólo aparecerán los favoritos. Podremos eliminar de favoritos desde aquí.
-![image](./src/assets/screenshots/favsteamsspage.png)
+![image](./src/assets/screenshots/favsteamspage.png)
