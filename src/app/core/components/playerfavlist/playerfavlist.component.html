@@ -1,8 +1,24 @@
-<ion-item>
-  <ion-avatar>
-    <img *ngIf="!plyfav.picture" alt="Default player picture" src="../../../../assets/icon/default-player.png"/>
-    <img *ngIf="plyfav.picture" alt="Custom player picture" [src]="plyfav.picture" />
-  </ion-avatar>
-  <ion-label>{{plyfav.name}} '<span id="cprimary">{{plyfav.nick}}</span>' {{plyfav.surname}} <br><ion-text color="medium">{{plyfav.role}}</ion-text></ion-label>
-  <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5" name="heart" ></ion-icon></ion-button>
-</ion-item>
+<ion-accordion-group>
+  <ion-item>
+    <ion-accordion color="dark">
+      <ion-item slot="header" id="nonborder">
+        <ion-avatar>
+          <img *ngIf="!plyfav.picture" alt="Default player picture" src="../../../../assets/icon/default-player.png" />
+          <img *ngIf="plyfav.picture" alt="Custom player picture" [src]="plyfav.picture" />
+        </ion-avatar>
+        <ion-label>{{plyfav.name}} '<span id="cprimary">{{plyfav.nick}}</span>' {{plyfav.surname}} <br><ion-text
+            color="medium">{{plyfav.role}}</ion-text></ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" color="dark" style="background-color: #1f2029;">
+        <p> <span id="cprimary" translate [translateParams]="{ language: language }">players.age</span>:
+          {{plyfav.age}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">players.kda</span>:
+          {{plyfav.kda}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">players.role</span>:
+          {{plyfav.role}}</p>
+      </div>
+    </ion-accordion>
+    <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5"
+        name="heart"></ion-icon></ion-button>
+  </ion-item>
+</ion-accordion-group>
