@@ -90,3 +90,13 @@ Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para ag
 ![image](./src/assets/screenshots/teamspage.png)
 ![image](./src/assets/screenshots/teamaccordion.png)
 ![image](./src/assets/screenshots/teamsedit.png)
+
+### PÁGINA DE MERCADO
+En esta página se registra la información y movimientos realizados en el mercado de jugadores. Un jugador se unirá a un equipo para jugar con este. Cabe destacar que un jugador puede jugar para varios equipos (puede pasar en este tipo de competiciones), para ello, cada equipo deberá tener un contrato con el jugador. Un contrato tendrá la siguiente información:
+- Jugador contratado
+- Equipo al que se une
+- Fecha del contrato
+Una vez se realiza un contrato, el jugador contratado y el equipo que contrata no podrán ser borrados hasta que el contrato no desaparezca.
+Podemos agregar un contrato y editar uno ya creado fácilmente mediante los botones de la página.
+![image](./src/assets/screenshots/rosterspage.png)
+![image](./src/assets/screenshots/rostersedit.png)
