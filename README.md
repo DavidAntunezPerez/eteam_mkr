@@ -51,4 +51,5 @@ En esta sección explicaré la estructura interna del programa, qué directorios
   
   - Pages: Donde se almacenan las páginas principales de la aplicación. He decidido que esta carpeta no debería de ser una carpeta routing general para enlazar cada página debido a que, a mi parecer, se facilita la manipulación de cada página, sus imports, declaraciones y exports si se mantiene de forma independiente en cada página un archivo de routing. Ademas así se diferencian mejor las pages de los componentes en la página y se facilita la gestión general. ![image](./src/assets/screenshots/app.png)
 
-  - Core: Una carpeta que contiene tanto los componentes que se asignarán a las páginas, como los servicios que utilizarán cada componente, y finalmente los modelos que se utilizarán en el sistema CRUD. Esta carpeta sí que tiene el routing conjunto para facilitar la adhesión de cada archivo a una página en concreto.
+  - Core: Una carpeta que contiene tanto los componentes que se asignarán a las páginas, como los servicios que utilizarán cada componente, y finalmente los modelos que se utilizarán en el sistema CRUD. Esta carpeta sí que tiene el routing conjunto para facilitar la adhesión de cada archivo a una página en concreto.            
+  ![image](./src/assets/screenshots/core.png)
