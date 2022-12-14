@@ -8,7 +8,6 @@ Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework**
 2. [Funcionalidades](#funcionalidades) 
 3. [Estructura Interna](#estructura-interna) 
 4. [Páginas y funcionamiento](#páginas-y-funcionamiento)
-
 5. [Video Explicativo](#video-explicativo)
 
 ## ¿QUÉ ES?
@@ -119,3 +118,6 @@ Esta página guarda sólo los equipos añadidos a favoritos. Desde aquí podremo
 ### PÁGINA ACERCA DE
 Esta es una página informativa sobre el proyecto y su creador. Aquí también se dispondrán de distintos botones para acceder a las redes sociales del creador.
 ![image](./src/assets/screenshots/aboutpage.png)
+
+# VIDEO EXPLICATIVO
+En el siguiente video se explica el funcionamiento de la aplicación de forma detallada, para verlo, haga click [aqui](https://youtube.com)
