@@ -103,3 +103,11 @@ Una vez se realiza un contrato, el jugador contratado y el equipo que contrata n
 Podemos agregar un contrato y editar uno ya creado fácilmente mediante los botones de la página.
 ![image](./src/assets/screenshots/rosterspage.png)
 ![image](./src/assets/screenshots/rostersedit.png)
+
+### PÁGINA DE JUGADORES FAVORITOS
+Esta página guarda sólo los jugadores añadidos a favoritos. Desde aquí podremos ver sus datos sin ningún problema. Sólo aparecerán los favoritos. Podremos eliminar de favoritos desde aquí.
+![image](./src/assets/screenshots/favsplayerspage.png)
+
+### PÁGINA DE EQUIPOS FAVORITOS
+Esta página guarda sólo los equipos añadidos a favoritos. Desde aquí podremos ver sus datos sin ningún problema. Sólo aparecerán los favoritos. Podremos eliminar de favoritos desde aquí.
+![image](./src/assets/screenshots/favsteamsspage.png)
