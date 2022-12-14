@@ -1,8 +1,25 @@
-<ion-item>
-  <ion-avatar>
-    <img *ngIf="!tamfav.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png"/>
-    <img *ngIf="tamfav.picture" alt="Custom team picture" [src]="tamfav.picture" />
-  </ion-avatar>
-  <ion-label>[<span id="cprimary">{{tamfav.tag}}</span>] {{tamfav.name}} <br><ion-text color="medium">{{tamfav.wr}} <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
-  <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5" name="star" ></ion-icon></ion-button>
-</ion-item>
+<ion-accordion-group>
+  <ion-item>
+    <ion-accordion color="dark">
+      <ion-item slot="header" id="nonborder">
+        <ion-avatar>
+          <img *ngIf="!tamfav.picture" alt="Default team picture" src="../../../../assets/icon/default-team.png" />
+          <img *ngIf="tamfav.picture" alt="Custom team picture" [src]="tamfav.picture" />
+        </ion-avatar>
+        <ion-label>[<span id="cprimary">{{tamfav.tag}}</span>] {{tamfav.name}} <br><ion-text
+            color="medium">{{tamfav.wr}}
+            <span translate [translateParams]="{ language: language }">teams.wrlist</span></ion-text></ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content" color="dark" style="background-color: #1f2029;">
+        <p> <span id="cprimary" translate [translateParams]="{ language: language }">teams.coach</span>:
+          {{tamfav.coach}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">teams.titles</span>:
+          {{tamfav.titles}}</p>
+        <p><span id="cprimary" translate [translateParams]="{ language: language }">teams.wrlist</span>:
+          {{tamfav.wr}}</p>
+      </div>
+    </ion-accordion>
+    <ion-button icon-only fill="clear" color="tertiary" (click)="onUnfavClick()"><ion-icon style="zoom:1.5"
+        name="star"></ion-icon></ion-button>
+  </ion-item>
+</ion-accordion-group>
