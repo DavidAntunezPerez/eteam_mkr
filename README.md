@@ -71,6 +71,7 @@ La página de jugadores nos mostrará una lista con todos los jugadores creados 
 - KDA: Ratio de Bajas/Muertes/Asistencias del jugador en todas sus partidas (KillDeathsAssists). Se calcula sumando las bajas a las asistencias y dividiendolas entre el número total de muertes ((K + A) / D).
 - Rol: El rol que toma el jugador en el juego, dependiendo del juego hay distintos roles. Se puede asimilar a las posiciones en el fútbol (delantero, portero, defensa...)
 - Foto: La foto adjunta del jugador, esto es opcional.
+
 A primera vista la información que se verá será la imagen, el nombre, el apodo, el apellido y el rol, pero al pulsar en el jugador se abrirá un desplegable con el resto de información.
 Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para agregar al jugador.
 ![image](./src/assets/screenshots/playerspage.png)
@@ -85,6 +86,7 @@ La página de equipos nos mostrará una lista con todos los equipos creados hast
 - Entrenador del equipo: Nombre completo del entrenador del equipo. Todos los equipos deben tener mínimo un entrenador.
 - Radio de Victorias: Cálculo del número de partidos ganados entre el número de partidos jugados.
 - Imagen: Imagen del logo del equipo. Es opcional.
+
 Al igual que pasa con los jugadores, a primera vista se verá el tag y el nombre del equipo, así como su ratio de victorias. Si clickamos en un equipo podremos ver el resto de información.
 Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para agregar al equipo.
 ![image](./src/assets/screenshots/teamspage.png)
