@@ -7,6 +7,7 @@ Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework**
 1. [¿Qué es?](#qué-es)
 2. [Funcionalidades](#funcionalidades) 
 3. [Estructura Interna](#estructura-interna) 
+4. [Páginas y funcionamiento](#páginas-y-funcionamiento)
 
 5. [Video Explicativo](#video-explicativo)
 
@@ -53,3 +54,6 @@ En esta sección explicaré la estructura interna del programa, qué directorios
 
   - Core: Una carpeta que contiene tanto los componentes que se asignarán a las páginas, como los servicios que utilizarán cada componente, y finalmente los modelos que se utilizarán en el sistema CRUD. Esta carpeta sí que tiene el routing conjunto para facilitar la adhesión de cada archivo a una página en concreto.            
   ![image](./src/assets/screenshots/core.png)
+
+## PÁGINAS Y FUNCIONAMIENTO
+
