@@ -6,8 +6,8 @@
       </ng-container>
       <ion-label *ngIf="!value" translate [translateParams]="{ language: language }">rosters.selectdate</ion-label>
     </ion-item>
-    <div class="ion-padding" slot="content">
-      <ion-datetime #datetime value="{{(date$ | async)}}" (ionChange)="onDateTimeChanged($event, accordion)">
+    <div class="ion-padding" slot="content" color="dark" style="background-color: #1f2029;">
+      <ion-datetime style="background-color: #1f2029;" color="dark" #datetime value="{{(date$ | async)}}" (ionChange)="onDateTimeChanged($event, accordion)">
         <ion-buttons slot="buttons">
           <ion-button color="danger" (click)="onCancel(datetime, accordion)">CANCEL</ion-button>
           <ion-button color="tertiary" (click)="onConfirm(datetime, accordion)">DONE</ion-button>
