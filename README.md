@@ -111,3 +111,7 @@ Esta página guarda sólo los jugadores añadidos a favoritos. Desde aquí podre
 ### PÁGINA DE EQUIPOS FAVORITOS
 Esta página guarda sólo los equipos añadidos a favoritos. Desde aquí podremos ver sus datos sin ningún problema. Sólo aparecerán los favoritos. Podremos eliminar de favoritos desde aquí.
 ![image](./src/assets/screenshots/favsteamspage.png)
+
+### PÁGINA ACERCA DE
+Esta es una página informativa sobre el proyecto y su creador. Aquí también se dispondrán de distintos botones para acceder a las redes sociales del creador.
+![image](./src/assets/screenshots/aboutpage.png)
