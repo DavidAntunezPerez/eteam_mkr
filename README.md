@@ -89,4 +89,4 @@ Al igual que pasa con los jugadores, a primera vista se verá el tag y el nombre
 Finalmente, en la opción de nuevo o editar nos saldrán estos atributos para agregar al equipo.
 ![image](./src/assets/screenshots/teamspage.png)
 ![image](./src/assets/screenshots/teamaccordion.png)
-![image](./src/assets/screenshots/teamssedit.png)
+![image](./src/assets/screenshots/teamsedit.png)
