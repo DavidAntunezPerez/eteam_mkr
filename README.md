@@ -4,7 +4,7 @@ Una aplicación basada en el sistema CRUD y creada mediante ***Ionic Framework**
 ## ÍNDICE: 
 1. [¿Qué es?](#qué-es)
 
-5. [Explicación en YouTube](#explicación-en-youtube)
+5. [Video Explicativo](#video-explicativo)
 
 ## ¿QUÉ ES?
 
