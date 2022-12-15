@@ -91,5 +91,9 @@
     "delete":"Supprimer",
     "alreadyfavplayer":"Le joueur est déjà dans votre liste de favoris",
     "alreadyfavteam":"L'équipe est déjà dans votre liste de favoris"
+  },
+  "btns":{
+    "modify":"Modifier",
+    "add" : "Ajouter"
   }
 }

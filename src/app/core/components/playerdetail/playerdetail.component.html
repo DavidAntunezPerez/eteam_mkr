@@ -52,7 +52,7 @@
       <ion-input type="text" [placeholder]='"players.pictureph" | translate' formControlName="picture"></ion-input>
     </ion-item>
     <div class="container">
-      <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+      <ion-button color="warning" [disabled]="!form.valid" type="submit">{{mode=="Edit"?['btns.modify' | translate]:['btns.add' | translate]}}</ion-button>
     </div>
   </form>
 </ion-content>

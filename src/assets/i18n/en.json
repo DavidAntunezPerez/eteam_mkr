@@ -91,6 +91,10 @@
     "delete":"Delete",
     "alreadyfavplayer":"Player is already in your favourite list",
     "alreadyfavteam":"Team is already in your favourite list"
+  },
+  "btns":{
+    "modify":"Modify",
+    "add" : "Add"
   }
   
 }
