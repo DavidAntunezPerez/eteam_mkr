@@ -120,4 +120,4 @@ Esta es una página informativa sobre el proyecto y su creador. Aquí también s
 ![image](./src/assets/screenshots/aboutpage.png)
 
 # VIDEO EXPLICATIVO
-En el siguiente video se explica el funcionamiento de la aplicación de forma detallada, para verlo, haga click [aqui](https://youtube.com)
+En el siguiente video se explica el funcionamiento de la aplicación de forma detallada, para verlo, haga click [aqui](https://youtu.be/DFlUl16wtzA)
