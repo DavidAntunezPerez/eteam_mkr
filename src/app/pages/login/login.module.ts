@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import { HomePageRoutingModule } from './home-routing.module';
-
-import { HomePage } from './home.page';
+import { LoginPageRoutingModule } from './login-routing.module';
+import { LoginPage } from './login.page';
 
 import { CoreModule } from '../../core/core.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -12,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 @NgModule({
   imports: [
     CoreModule,
-    HomePageRoutingModule,
+    LoginPageRoutingModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -21,6 +20,6 @@ import { HttpClient } from '@angular/common/http';
       }
     })
   ],
-  declarations: [HomePage]
+  declarations: [LoginPage]
 })
-export class HomePageModule {}
+export class LoginPageModule {}
