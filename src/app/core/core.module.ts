@@ -2,7 +2,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent, RosterDetailComponent, RosterListComponent, DateShowListComponent, PlayerShowListComponent, TeamShowListComponent, LogTestComponent, LogService, PlayerfavlistComponent, TeamfavlistComponent } from 'src/app/core';
+import { PlayerDetailComponent, PlayerListComponent , TeamDetailComponent , TeamListComponent, RosterDetailComponent, RosterListComponent, DateShowListComponent, PlayerShowListComponent, TeamShowListComponent, LogTestComponent, LogService, PlayerfavlistComponent, TeamfavlistComponent, SigninComponent, SignupComponent } from 'src/app/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from '../utils/translate';
 import { HttpClient } from '@angular/common/http';
@@ -21,6 +21,8 @@ import { HttpClient } from '@angular/common/http';
     LogTestComponent,
     PlayerfavlistComponent,
     TeamfavlistComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     CommonModule,
@@ -52,6 +54,8 @@ import { HttpClient } from '@angular/common/http';
     LogTestComponent,
     PlayerfavlistComponent,
     TeamfavlistComponent,
+    SigninComponent,
+    SignupComponent
   ],
   providers:[
     // {
