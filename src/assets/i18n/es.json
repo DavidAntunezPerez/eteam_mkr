@@ -4,7 +4,8 @@
     "username":"Usuario",
     "password":"Contraseña",
     "button":"Entrar",
-    "signup":"¿No tienes una cuenta? Registrate"
+    "signup":"¿No tienes una cuenta? Registrate",
+    "google":"Iniciar sesión con Google"
   },
   "register":{
     "title":"Registrarse",

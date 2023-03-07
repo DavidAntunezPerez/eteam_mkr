@@ -4,7 +4,8 @@
     "username": "Username",
     "password": "Password",
     "button": "Login",
-    "signup": "Don't have an account? Sign up"
+    "signup": "Don't have an account? Sign up",
+    "google":"Login with Google"
   },
 
   "register": {
