@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ModalController } from '@ionic/angular';
-import { PasswordValidation } from 'src/app/utils/password-validator';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/core/services';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-signup',
@@ -10,42 +11,37 @@ import { PasswordValidation } from 'src/app/utils/password-validator';
 })
 export class SignupComponent implements OnInit {
 
-  form:FormGroup;
+  formReg: FormGroup;
+
   constructor(
-    private formBuilder:FormBuilder,
-    private modalCtrl:ModalController
+    private translateService: TranslateService,
+    private userService: UserService,
+    private router: Router
   ) {
-    this.form = this.formBuilder.group({
-      first_name:["", Validators.required],
-      last_name:["", Validators.required],
-      email:["", [Validators.required, Validators.email]],
-      password:["", Validators.required],
-      confirmPassword:["", Validators.required]
-    },{validator:[PasswordValidation.passwordMatch, PasswordValidation.passwordProto]});
+    this.formReg = new FormGroup({
+      email : new FormControl(),
+      password: new FormControl()
+    })
+   }
+
+   // CHANGE LANGUAGE
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
   }
 
   ngOnInit() {}
 
-  onRegister(){
-    this.modalCtrl.dismiss({
-      email:this.form.value.email,
-      username:this.form.value.email,
-      password:this.form.value.password,
-      first_name:this.form.value.first_name,
-      last_name:this.form.value.last_name
-    }, 'ok');
+  onSubmit(){
+    this.userService.register(this.formReg.value)
+    .then( response => {
+      console.log(response)
+      this.router.navigate(['/login'])
+    } )
+    .catch(error => console.log(error))
   }
 
-  hasFormError(error:any){
-    return this.form?.errors && Object.keys(this.form.errors).filter(e=>e==error).length==1;
+  onLogin(){
+    this.router.navigate(['/login'])
   }
-  
-  errorsToArray(errors:any){
-   
-    if(errors && !('required' in errors))
-      return [Object.keys(errors)[0]];
-    else
-      return [];
-  } 
-
 }

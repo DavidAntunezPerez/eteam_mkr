@@ -1,32 +1,15 @@
-<ion-grid class="login">
-  <ion-row>
-    <ion-col>
-      <form [formGroup]="form" (ngSubmit)="onSignIn()">
-        <h1>{{'login.title' | translate}}</h1>
-        <div class="form-button right">
-          <ion-button (click)="register()" color="primary" fill="clear">
-            <small>{{'register.register' | translate}}</small>
-          </ion-button>
-        </div> 
-        
-        <ion-list>
-          <ion-item>
-            <ion-label position="stacked">
-              {{'login.email' | translate}}
-            </ion-label>
-            <ion-input [enterkeyhint]="'next'" autocomplete="email" type="text" formControlName="identifier"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="stacked">
-              {{'login.password' | translate}}
-            </ion-label>
-            <ion-input (keyup.enter)="form.valid?onSignIn():null" [enterkeyhint]="'enter'" autocomplete="password" type="password" formControlName="password"></ion-input>
-          </ion-item>
-        </ion-list> 
-        <div class="form-button right">
-          <ion-button [disabled]="!form.valid" (click)="onSignIn()">{{'login.send' | translate}}</ion-button>
-        </div>
-      </form>    
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<form class="box" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+  <h1>{{'login.title' | translate}}</h1>
+  <input type="text" formControlName="email" placeholder="{{'login.username' | translate}}">
+  <input type="password" formControlName="password" placeholder="{{'login.password' | translate}}">
+  <input type="submit" value="{{'login.button' | translate}}">
+  <ion-button (click)="onClick()">
+    <ion-img src="../../../../../assets/icon/sign-google.png" style="width:15%; padding-right: 10px" alt="Google logo"></ion-img>
+    Login with Google
+  </ion-button>
+  <ion-button (click)="onRegister()" color="primary" fill="clear">
+    <small>
+      {{'login.signup' | translate}}
+    </small>
+  </ion-button>
+</form>

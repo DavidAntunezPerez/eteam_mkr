@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
-import { UserService } from 'src/app/core/services/user.service';
-import { SignupComponent } from '../signup/signup.component';
+import { UserService } from 'src/app/core/services';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-signin',
@@ -12,64 +11,48 @@ import { SignupComponent } from '../signup/signup.component';
 })
 export class SigninComponent implements OnInit {
 
-  form:FormGroup;
+
+  formLogin: FormGroup;
+
   constructor(
-    private formBuilder:FormBuilder,
-    private modalCtrl:ModalController,
-    private user:UserService,
-    private router:Router
-  ) { 
-    this.form = this.formBuilder.group({
-      identifier:["", [Validators.required, Validators.email]],
-      password:["", Validators.required]
-    });
-    
+    private translateService: TranslateService,
+    private userService: UserService,
+    private router: Router
+  ) {
+    this.formLogin = new FormGroup({
+      email: new FormControl(),
+      password : new FormControl()
+    })
+   }
+
+   // CHANGE LANGUAGE
+  language: string = this.translateService.currentLang;
+  languageChange() {
+    this.translateService.use(this.language);
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
-  async register(){
-    const modal = await this.modalCtrl.create({
-      component:SignupComponent,
-      cssClass:"modal-full-right-side"
-    });
-
-    modal.onDidDismiss().then(async(response)=>{
-      try {
-        if(response.role=='ok'){
-          await this.user.register(response.data);
-          this.router.navigate(['folder/Home'], {replaceUrl:true});
-        }
-        
-      } catch (error) {
-        console.log(error);
-  
-      }
-    });
-    modal.present();
+  onSubmit(){
+    this.userService.login(this.formLogin.value)
+    .then(response => {
+      console.log(response);
+      this.router.navigate(['/home'])
+    })
+    .catch(error => console.log(error));
   }
 
-  async onSignIn(){
-    try {
-      await this.user.login(this.form.value);
-      this.router.navigate(['folder/Home'], {replaceUrl:true});
-    } catch (error) {
-      console.log(error);
-
-    }
-    
+  onRegister(){
+    this.router.navigate(['/register'])
   }
 
-  hasFormError(error:any){
-    return this.form?.errors && Object.keys(this.form.errors).filter(e=>e==error).length==1;
+  onClick(){
+    this.userService.loginWithGoogle()
+    .then( response =>{
+        console.log(response);
+        this.router.navigate(['/home']);
+    } )
+    .catch( error => console.log(error))
   }
-  
-  errorsToArray(errors:any){
-   
-    if(errors && !('required' in errors))
-      return [Object.keys(errors)[0]];
-    else
-      return [];
-  } 
 
 }

@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
-
-  constructor( private translateService: TranslateService) { }
+export class RegisterPage implements OnInit {
+  constructor(private translateService: TranslateService) {}
 
   // CHANGE LANGUAGE
   language: string = this.translateService.currentLang;
@@ -16,7 +15,5 @@ export class LoginPage implements OnInit {
     this.translateService.use(this.language);
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

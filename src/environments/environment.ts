@@ -3,9 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  api_url:"http://localhost:1337",
-  api_token:"95db02b60a3b45b6300e49915abf60941799158c29bf7dae9c1b780f17177be3a3c2f19d79b1660e2c1c4dd0f01568fde29785d02eab3472868553ae147588468aeddec02459b691bc68a27585f25bd91cc4fd4afc73775e54e02a8ea20a2803eda18cd18a867b08fe4d20112f8231ea55444cd05d94f4db78634dc105b9bee4"
+  firebase: {
+    projectId: 'eteam-maker',
+    appId: '1:171709672090:web:097653ce5ee2f66c82cd23',
+    storageBucket: 'eteam-maker.appspot.com',
+    apiKey: 'AIzaSyBohiCkK6Ya0B80KRvt_IsofhgmuOBexRw',
+    authDomain: 'eteam-maker.firebaseapp.com',
+    messagingSenderId: '171709672090',
+  },
+  production: false
 };
 
 /*

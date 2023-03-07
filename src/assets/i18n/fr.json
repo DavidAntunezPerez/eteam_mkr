@@ -1,4 +1,18 @@
 {
+  "login": {
+    "title":"Connexion",
+    "username":"Nom d'utilisateur",
+    "password":"Mot de passe",
+    "button":"Entrée",
+    "signup":"ous n'avez pas de compte ? Inscrivez-vous"
+  },
+  "register":{
+    "title":"Enregistrer",
+    "username":"Nom d'utilisateur",
+    "password":"Mot de passe",
+    "button":"Entrée",
+    "signin":"Avez-vous déjà un compte? Connexion"
+  },
   "home": {
     "languageChangePlaceholder": "Langue...",
     "title": "Accueil",
