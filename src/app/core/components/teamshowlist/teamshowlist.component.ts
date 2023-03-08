@@ -34,9 +34,12 @@ export class TeamShowListComponent implements OnInit, ControlValueAccessor {
   ) { }
 
 
-  writeValue(obj: any): void {
-    this.selectedTeam = this.tamSvc.getTeamById(obj);
-    console.log(obj);
+  async writeValue(obj: any) {
+    try {
+      this.selectedTeam = await this.tamSvc.getTeamById(obj);  
+    } catch (error) {
+      console.log("Datos no recuperados: "+ error);
+    }
   }
   registerOnChange(fn: any): void {
     this.propagateChange = fn;
@@ -51,13 +54,13 @@ export class TeamShowListComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {}
 
   getTeam(){
-    return this.tamSvc.getTeam();
+    return this.tamSvc.getTeamList();
   } 
 
   onTeamClicked(team:Team, accordion:IonAccordionGroup){
     this.selectedTeam = team;
     accordion.value='';
-    this.propagateChange(this.selectedTeam.id);
+    this.propagateChange(this.selectedTeam.docId);
   }
 
 }
