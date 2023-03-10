@@ -35,6 +35,8 @@ El diseño de la aplicación está realizado para que cualquier persona pueda co
 
 - Una funcionalidad extra y oculta a ojos del usuario final es la del servicio de Logs, un servicio que nos proporcionará información adicional a la hora de codificar o mantener la aplicación. Está unida a un componente llamado LogComponent, que al ser agregado a cualquier página nos mostrará un botón donde al clickarlo detallará en la consola datos informativos sobre la página.
 
+- Un sistema funcional de Login y Registration mediante correo electrónico y contraseña o mediante cuenta de Google utilizando Firebase.
+
 ## ESTRUCTURA INTERNA
 En esta sección explicaré la estructura interna del programa, qué directorios y subdirectorios contiene y por qué se ha decidido así.
 
@@ -57,6 +59,17 @@ En esta sección explicaré la estructura interna del programa, qué directorios
 ## PÁGINAS Y FUNCIONAMIENTO
 
 En esta sección se detallarán página por página las funciones y el proposito de estas.
+
+## LOGIN PAGE
+Página de inicio de sesión que nos permitirá acceder con una cuenta creada o mediante una cuenta de Google. Al iniciar con una cuenta de Google el registro será automático pero si quieres iniciar sesión con correo y contraseña deberás acceder a la página de Registro. Toda la gestión de creación de cuentas en el backend está realizada mediante Google Firebase y se almacena con seguridad allí.
+Una vez iniciada la sesión automáticamente accederás a la página de Home Page y podrás acceder al resto de páginas CRUD. Al hacer Log Out desde la Home Page, no se permitirá acceder a estas páginas hasta que no se haya completado otra vez el proceso de Log In
+![image](./src/assets/screenshots/loginpage.png)
+![image](./src/assets/screenshots/loginpage2.png)
+![image](./src/assets/screenshots/loginwithgoogle.png)
+
+## REGISTER PAGE
+La página de registro nos permitirá crear una cuenta de correo y contraseña. Una vez rellenado los datos correctamente se te redirigirá a la página de Log In para poder iniciar sesión.
+![image](./src/assets/screenshots/registerpage.png)
 
 ### MENÚ
 Menú intuitivo que nos permitirá navegar entre todas las páginas de forma instantánea.
@@ -121,3 +134,6 @@ Esta es una página informativa sobre el proyecto y su creador. Aquí también s
 
 # VIDEO EXPLICATIVO
 En el siguiente video se explica el funcionamiento de la aplicación de forma detallada, para verlo, haga click [aqui](https://youtu.be/DFlUl16wtzA)
+
+# VIDEO EXPLICATIVO DE LAS FUNCIONES BACKEND
+En el siguiente video se explica el funcionamiento de la parte del backend con Firebase, para verlo, haga click [aqui](https://youtu.be/DFlUl16wtzA)
