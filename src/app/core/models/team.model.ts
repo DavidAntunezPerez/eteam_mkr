@@ -1,7 +1,6 @@
 // MODEL FOR TEAMS
 export interface Team {
   id: number;
-  docId?:string;
   name: String;
   tag: String; // teams must have a short tag to represent it in game (example: FNATIC's tag is FNC)
   titles?: String; // titles won by a team in its history, could be null if they didnt win anything

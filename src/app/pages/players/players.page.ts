@@ -29,7 +29,7 @@ export class PlayersPage implements OnInit {
   ngOnInit() {}
 
   getPlayer() {
-    return this.playerinfo.player$;
+    return this.playerinfo.getPlayer();
   }
 
   async presentPersonForm(player: Player) {
@@ -83,7 +83,9 @@ export class PlayersPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-              this.playerinfo.deletePlayer(player);
+            if (player.id) {
+              this.playerinfo.deletePlayerById(player.id);
+            }
           },
         },
       ],

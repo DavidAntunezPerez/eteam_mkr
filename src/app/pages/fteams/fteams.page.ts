@@ -46,7 +46,9 @@ export class FteamsPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            this.teaminfo.deleteFavTeam(team);
+            if (team.id) {
+              this.teaminfo.deleteFavTeam(team);
+            }
           },
         },
       ],

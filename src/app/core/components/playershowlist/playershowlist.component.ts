@@ -33,25 +33,13 @@ export class PlayerShowListComponent implements OnInit, ControlValueAccessor {
     private translateService: TranslateService
   ) { }
 
-  async writeValue(obj: any) {
-    try {
-      this.selectedPlayer = await this.plySvc.getPlayerById(obj);  
-    } catch (error) {
-      console.log("Datos no recuperados: "+ error);
-    }
+
+  writeValue(obj: any): void {
+    this.selectedPlayer = this.plySvc.getPlayerById(obj);
   }
-    
-
-  // writeValue(obj: any): void {
-  //   this.selectedPlayer = this.plySvc.getPlayerById(obj);
-  // }
-
-
-
   registerOnChange(fn: any): void {
     this.propagateChange = fn;
   }
-
   registerOnTouched(fn: any): void {
   }
 
@@ -62,13 +50,13 @@ export class PlayerShowListComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {}
 
   getPlayer(){
-    return this.plySvc.getPlayerList();
+    return this.plySvc.getPlayer();
   } 
 
   onPlayerClicked(player:Player, accordion:IonAccordionGroup){
     this.selectedPlayer = player;
     accordion.value='';
-    this.propagateChange(this.selectedPlayer.docId);
+    this.propagateChange(this.selectedPlayer.id);
   }
 
 }
