@@ -46,9 +46,7 @@ export class FplayersPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            if (player.id) {
-              this.playerinfo.deleteFavPlayer(player);
-            }
+            this.playerinfo.deleteFavPlayer(player);
           },
         },
       ],

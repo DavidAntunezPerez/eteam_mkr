@@ -26,7 +26,7 @@ export class TeamsPage implements OnInit {
   ngOnInit() {}
 
   getTeam() {
-    return this.teaminfo.getTeam();
+    return this.teaminfo.getTeamList();
   }
 
   async presentPersonForm(team: Team) {
@@ -80,9 +80,7 @@ export class TeamsPage implements OnInit {
           role: 'confirm',
           cssClass: 'alertConfirm',
           handler: () => {
-            if (team.id) {
-              this.teaminfo.deleteTeamById(team.id);
-            }
+              this.teaminfo.deleteTeam(team);
           },
         },
       ],
