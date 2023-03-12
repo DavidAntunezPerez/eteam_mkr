@@ -136,4 +136,4 @@ Esta es una página informativa sobre el proyecto y su creador. Aquí también s
 En el siguiente video se explica el funcionamiento de la aplicación de forma detallada, para verlo, haga click [aqui](https://youtu.be/DFlUl16wtzA)
 
 # VIDEO EXPLICATIVO DE LAS FUNCIONES BACKEND
-En el siguiente video se explica el funcionamiento de la parte del backend con Firebase, para verlo, haga click [aqui](https://youtu.be/DFlUl16wtzA)
+En el siguiente video se explica el funcionamiento de la parte del backend con Firebase, para verlo, haga click [aqui](https://youtu.be/vu9Ep-K27sw)
